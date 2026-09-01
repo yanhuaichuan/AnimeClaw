@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/brand/dclogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnimeClaw 漫剧工厂 — 让角色在几十集里仍是同一个人</title>
+    <meta
+      name="description"
+      content="AnimeClaw is a DramaClaw-based anime-drama studio: character bible, shot continuity, manga camera, acting, and long-form IP memory. | 基于 DramaClaw 的漫剧工厂 —— 角色圣经、镜头连续性、漫画镜头语言与长篇连载。"
+    />
+    <link rel="canonical" href="https://github.com/yanhuaichuan/AnimeClaw" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AnimeClaw" />
+    <meta property="og:title" content="AnimeClaw 漫剧工厂 — 让角色在几十集里仍是同一个人" />
+    <meta
+      property="og:description"
+      content="AnimeClaw is a DramaClaw-based anime-drama studio: character bible, shot continuity, manga camera, acting, and long-form IP memory."
+    />
+    <meta property="og:url" content="https://github.com/yanhuaichuan/AnimeClaw" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AnimeClaw 漫剧工厂 — 让角色在几十集里仍是同一个人" />
+    <meta
+      name="twitter:description"
+      content="AnimeClaw is a DramaClaw-based anime-drama studio: character bible, shot continuity, manga camera, acting, and long-form IP memory."
+    />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("supertale-app");
+          var theme = "system";
+          if (stored) {
+            var parsed = JSON.parse(stored);
+            if (parsed && parsed.state && parsed.state.theme) {
+              theme = parsed.state.theme;
+            }
+          }
+          var resolved =
+            theme === "system"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : theme;
+          document.documentElement.classList.add(resolved);
+          var pathname = window.location.pathname;
+          if (pathname === "/login" || pathname.indexOf("/watch/") === 0) {
+            document.documentElement.classList.add("preauth-shell");
+            document.documentElement.style.backgroundColor = "#181818";
+          }
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

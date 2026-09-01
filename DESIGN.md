@@ -1,0 +1,505 @@
+---
+version: alpha
+name: AnimeClaw
+description: >-
+  AnimeClaw 漫剧工厂的视觉规范：暗色优先、信息密集的工作台，樱色强调。
+  token 逐值对齐 frontend/src/index.css；以暗色为准，亮色值以 light-* 前缀并行。
+colors:
+  # ── 画布 / freezone 表面（来源：index.css 的 --*-rgb，.dark 块）──
+  background: "#0c0814"
+  surface: "#17111f"
+  surface-panel: "#1a1326"
+  surface-modal: "#22182e"
+  surface-field: "#100c18"
+  border-soft: "#2a2038"
+  border-strong: "#3d2f52"
+  border: "#2e243c"
+  text: "#f4eef8"
+  text-muted: "#9a8eab"
+  accent: "#ff7ab6"
+  # ── shadcn 语义层（来源：.dark 块的 oklch 值）──
+  primary: "#ff6b9d"
+  primary-foreground: "#1a0d16"
+  secondary: "#3a1f3a"
+  foreground: "#f4eef8"
+  card: "#24182f"
+  muted: "#1a1224"
+  muted-foreground: "#b09cbc"
+  ui-border: "#3a2d4a"
+  sidebar: "#120c1a"
+  destructive: "#ea4335"
+  success: "#51bf6f"
+  warning: "#efa831"
+  chart-1: "#ff6b9d"
+  chart-2: "#c084fc"
+  chart-3: "#fb7185"
+  chart-4: "#f472b6"
+  chart-5: "#a78bfa"
+  # ── 亮色主题（来源：:root 块）——角色相同，取值更亮 ──
+  light-background: "#fffafd"
+  light-surface: "#faf4f8"
+  light-border: "#e8d6e2"
+  light-text: "#1a0d16"
+  light-text-muted: "#7a6070"
+  light-accent: "#e11d74"
+  light-primary: "#c2185b"
+  light-foreground: "#111b21"
+  light-card: "#ffffff"
+  light-muted: "#f0f2f5"
+  light-muted-foreground: "#667781"
+  light-ui-border: "#e9edef"
+typography:
+  display-lg:
+    fontFamily: Inter
+    fontSize: 30px
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: 600
+    lineHeight: 1.33
+  headline-md:
+    fontFamily: Inter
+    fontSize: 20px
+    fontWeight: 600
+    lineHeight: 1.4
+  title-lg:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: 600
+    lineHeight: 1.55
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.5
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 1.43
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 1.33
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: 500
+    lineHeight: 1.25
+  label-strong:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: 600
+    lineHeight: 1.43
+  mono-sm:
+    fontFamily: SFMono-Regular
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 1.33
+  counter-pixel:
+    fontFamily: PikoCountdownPixel
+    fontSize: 72px
+    fontWeight: 600
+    lineHeight: 1
+rounded:
+  sm: 12px
+  md: 14px
+  lg: 16px
+  xl: 20px
+  field: 12px
+  node: 14px
+  panel: 16px
+  full: 9999px
+spacing:
+  base: 4px
+  xs: 4px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 24px
+  2xl: 32px
+  button-y: 4px
+  button-x: 11px
+  node-gutter: 12px
+components:
+  modal:
+    backgroundColor: "{colors.surface-modal}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.xl}"
+    padding: "{spacing.xl}"
+  panel:
+    backgroundColor: "{colors.surface-panel}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.panel}"
+    padding: "{spacing.md}"
+  button-quiet:
+    backgroundColor: "#0f1117"
+    textColor: "{colors.text}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+    padding: 4px 11px
+  button-quiet-hover:
+    backgroundColor: "#15161c"
+  button-quiet-primary:
+    backgroundColor: "#0f1117"
+    textColor: "{colors.accent}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+  button-quiet-primary-hover:
+    backgroundColor: "#3a1f3a"
+    textColor: "{colors.accent}"
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.primary-foreground}"
+    typography: "{typography.label-strong}"
+    rounded: "{rounded.md}"
+    height: 36px
+    padding: 0 16px
+  chip:
+    backgroundColor: "#101118"
+    textColor: "{colors.text-muted}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.full}"
+    padding: 2px 10px
+  chip-active:
+    backgroundColor: "#3a1f3a"
+    textColor: "{colors.accent}"
+  field:
+    backgroundColor: "{colors.surface-field}"
+    textColor: "{colors.text}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.field}"
+    padding: 8px 12px
+    height: 36px
+  field-focus:
+    backgroundColor: "{colors.surface-field}"
+    textColor: "{colors.text}"
+  canvas-node:
+    backgroundColor: "{colors.surface-panel}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.node}"
+    padding: "{spacing.md}"
+  canvas-node-selected:
+    backgroundColor: "{colors.surface-panel}"
+    textColor: "{colors.accent}"
+  popover:
+    backgroundColor: "{colors.card}"
+    textColor: "{colors.foreground}"
+    rounded: "{rounded.lg}"
+    padding: "{spacing.md}"
+  badge-muted:
+    backgroundColor: "{colors.muted}"
+    textColor: "{colors.muted-foreground}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.full}"
+  status-failed:
+    backgroundColor: "{colors.muted}"
+    textColor: "{colors.destructive}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+  status-succeeded:
+    backgroundColor: "{colors.muted}"
+    textColor: "{colors.success}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+  status-degraded:
+    backgroundColor: "{colors.muted}"
+    textColor: "{colors.warning}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+  sidebar-item:
+    backgroundColor: "{colors.sidebar}"
+    textColor: "{colors.foreground}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.sm}"
+  # ── 亮色变体（无 `.dark` 时）。组件相同，改引 light-* token。──
+  panel-light:
+    backgroundColor: "{colors.light-card}"
+    textColor: "{colors.light-foreground}"
+    rounded: "{rounded.panel}"
+    padding: "{spacing.md}"
+  canvas-node-light:
+    backgroundColor: "{colors.light-surface}"
+    textColor: "{colors.light-text}"
+    rounded: "{rounded.node}"
+    padding: "{spacing.md}"
+  field-light:
+    backgroundColor: "{colors.light-background}"
+    textColor: "{colors.light-text}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.field}"
+    padding: 8px 12px
+  chip-light:
+    backgroundColor: "{colors.light-muted}"
+    textColor: "{colors.light-text-muted}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.full}"
+  button-primary-light:
+    backgroundColor: "{colors.light-primary}"
+    textColor: "{colors.light-background}"
+    typography: "{typography.label-strong}"
+    rounded: "{rounded.md}"
+    height: 36px
+  button-quiet-primary-light:
+    backgroundColor: "{colors.light-surface}"
+    textColor: "{colors.light-accent}"
+    typography: "{typography.label-md}"
+    rounded: "{rounded.full}"
+  badge-muted-light:
+    backgroundColor: "{colors.light-muted}"
+    textColor: "{colors.light-muted-foreground}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.full}"
+---
+
+# AnimeClaw DESIGN.md
+
+本文件是 `frontend/src/index.css` 的机读镜像。CSS 变量一改，本文件必须同 commit 更新——
+靠 `npx @google/design.md diff` 跟上一版比对，才能抓出视觉回归。
+
+> 章节标题保持英文（Overview / Colors / …），因为 DESIGN.md 规范按英文标题解析章节，
+> 改成中文会被 linter 判为「缺失章节」。token 名、CSS 变量名、类名、属性名、色值同理保持原文。
+
+## Overview
+
+AnimeClaw（漫剧工厂）是 DramaClaw 之上的漫剧工作台：角色圣经、分镜、连续性、任务队列。
+用户是会把工具开一整天的创作者，所以 UI 定性为**暗色优先、信息密集、克制，但带樱色漫剧气质**——
+`theme: 'dark'` 是持久化的默认值，亮色是受支持的备选，不是主战场。
+
+调性是「漫画工作台，不是海报」。界面外壳退到墨黑半透明玻璃里；一屏之内唯一的高饱和色，
+只属于用户正在操作的那个东西，并且统一为樱粉/品红，不再同时使用青与蓝。
+密集是刻意的：12px 是主力字号，4–8px 是主力间距。
+动效短促且减速——表面是「落定」，绝不回弹。
+
+明确不要的东西：多强调色打架、俏皮的回弹缓动、把工作台做成营销落地页。
+漫剧工作台允许一层很淡的速度线底纹，但不得压过正文对比度。
+
+以上以及本文件其余全部规则，适用范围是**登录之后的产品界面**。未登录就能访问的对外落地页
+（下载页、登录页）是一小块有意划出的例外，边界写在 Scope & Exceptions 里。
+
+## Colors
+
+两套色板共存，但**同一个表面上不得混用**：
+
+- **画布色板**（`background` #0c0814 → `surface` #17111f → `border` #2e243c，
+  文字 `text` #f4eef8 / `text-muted` #9a8eab，强调色 `accent` #ff7ab6）。
+  驱动 freezone 画布、节点主体、悬浮工具条，以及所有 `.tap-*` / `.ui-*` 类。
+  取值以空格分隔的 RGB 三元组形式存放（`--bg-rgb`），便于叠加 alpha：
+  `rgb(var(--accent-rgb) / 0.22)`。
+- **shadcn 语义色板**（`primary` #ff6b9d 樱粉、`card` #24182f、
+  `muted-foreground` #b09cbc、`ui-border` #3a2d4a，外加 `destructive` / `success` /
+  `warning`）。驱动 shadcn 原语——弹窗、下拉、Tab、表单——用 `oklch()` 书写以保证
+  感知均匀。
+
+规则：
+
+- 语义状态色两套色板共用：`destructive` #ea4335 表示危险与失败，`success` #51bf6f
+  表示完成，`warning` #efa831 表示降级或额度受限。**不要再造第二个红。**
+- `accent`（樱粉）和 `primary`（品红）是**同一色相家族的两档**，不是两套品牌色。
+  画布表面用 `accent`，shadcn 原语用 `primary`。按「表面归属哪套色板」来选，不要另起青色。
+- 静止表面上彩度必须低。shadcn 的 `secondary` / `accent` 是带品红调的灰
+  （暗色 #3a1f3a），正是为了让下拉和 Tab 的 hover 态足够安静。
+- 亮色模式把 `background` 翻成微粉白 #fffafd、`text` 翻成墨黑 #1a0d16，强调色换 `light-accent` #e11d74；
+  `card` 变纯白，衬在浅粉灰的页面底上。
+- `chart-1` … `chart-5` 是唯一批准的数据序列色，走「樱 → 紫 → 玫 → 粉 → 堇」，
+  保证同一色系不重复出现。
+
+## Typography
+
+拉丁字形用 **Inter**，CJK 依次回退 `Noto Sans SC` → `PingFang SC` → `Microsoft YaHei`
+（见 `--font-family-ui-default`；macOS 走更短的 `--font-family-ui-macos`）。
+产品文案以中文为主，因此：
+
+- **CJK 正文永远不要设 `letterSpacing`**。对 Inter 好看的字距会破坏汉字的字面间距。
+  负字距只保留给 `display-lg`。
+- 同样 px 下 CJK 字形看起来比拉丁小约一档。中英混排的标签优先用 `body-md`（14px），
+  而不是 `body-sm`（12px）。
+- `line-height` 一律用无单位数值，这样能随 CJK 回退字体更大的 x-height 一起缩放。
+
+实际层级分工：`body-sm`（12px）和 `body-md`（14px）承担约 90% 的产品文本——
+属性面板行、节点标签、任务列表。`label-md`（12px/500）用于 chip、按钮、工具条控件。
+`headline-*` 每个面板标题只出现一次。`display-lg` 只留给空状态和弹窗标题。
+`mono-sm` 仅用于 ID、路径、seed、时间码。`counter-pixel`（方舟像素数字子集）
+只作用于 Piko 小游戏倒计时，不得外泄到产品界面。
+
+## Layout & Spacing
+
+**4px 基准单位**（`--spacing: 0.25rem`），之上叠 8/12/16 的节奏。这是密集型工具：
+代码里出现最多的两个间距是 `gap-1`（4px）和 `gap-2`（8px），面板内边距是 8–12px，
+不是 24px。
+
+- 外壳：固定左侧栏 + 流式工作区。画布满幅铺开；面板浮在它上面，而不是把它挤变形。
+- 悬浮面板（工具条、属性面板、popover）用 `position: fixed`、12px 内边距，
+  并以 16px 安全边距被夹在视口内。
+- 节点内部用 12px 的沟槽，元素间 8px 堆叠。属性面板行间距 4px；组之间用 12px 分隔，
+  绝不用分割线。
+- 列表和网格在 `.ui-scrollbar` 内滚动（7px 细滑块，`rgba(148,163,184,0.5)`）。
+  横向滚动条通过 `.ui-scrollbar-vertical` 隐藏，但仍可用手势滚动。
+- 页面 body 永不横向滚动。宽内容自带 `overflow-x: auto` 容器。
+
+## Elevation & Depth
+
+层次来自**近黑底上的半透明玻璃**，不是靠堆阴影。每个悬浮表面都是：
+半透明填充 + 1px 细边 + 一层柔和阴影。
+
+- **Level 0 — 底场：** `background` #0c0814。不透明，永不模糊。
+- **Level 1 — 节点 / 内联表面：** `surface-panel`，细边 `border-soft`
+  （`rgba(255,255,255,0.05)`），不加模糊。
+- **Level 2 — 悬浮面板**（`.tap-panel` / `.ui-panel`）：
+  `background: rgba(23,17,31,0.82)`、`border-soft`，以及
+  `--ui-shadow-panel` = `0 14px 34px rgba(0,0,0,0.5)` 加一道
+  `0 1px 0 rgba(255,255,255,0.03) inset` 顶部高光。压在画布上时配 `.backdrop-blur-tap`
+  （`saturate(180%) blur(18px)`）。
+- **Level 3 — 弹窗 / popover：** 产品工作台里的决策弹窗使用中性
+  `surface-modal` #1b1c23 配 `ui-border`；通用 shadcn popover 继续使用 `card`。
+  模态不模糊——它是要你做决定的。
+- **焦点与选中用发光，不用阴影：** hover-primary 用 `--ui-glow-accent` =
+  `0 0 24px rgb(var(--accent-rgb) / 0.25)`；聚焦输入框用
+  `0 0 0 3px rgb(var(--accent-rgb) / 0.12)` 的 ring。
+- 亮色模式把同样三层换成 #f0f2f5 上的不透明白卡片，阴影柔和得多
+  （`0 2px 10px rgba(0,0,0,0.10)`）；玻璃隐喻在那边是刻意弱化的。
+
+动效 token 也是层次的一部分：`--duration-fast` 150ms 用于 hover 和变色，
+`--duration-base` 220ms 用于面板入场，`--duration-slow` 320ms 用于布局位移，
+一律搭配 `--ease-out-quint` `cubic-bezier(0.22,1,0.36,1)` 或 `--ease-standard`。
+**绝不用 bounce / elastic**——真实物体只会平滑减速。
+
+## Shapes
+
+两套圆角家族，相对小字号都偏大：
+
+- **胶囊**（`rounded.full`，9999px）用于一切「可点但不是提交」的东西：安静按钮、
+  chip、筛选器、标签。这是签名形状——`rounded-full` 是代码里用得最多的圆角。
+- **柔和矩形**用于容器：输入框 `field` 12px，画布节点 `node` 14px，
+  悬浮面板 `panel` 16px，大抽屉 `xl` 20px。
+
+`--radius` 是 1rem，shadcn 的档位由它推导（`sm` 12px → `xl` 20px），所以这个项目里
+Tailwind 的 `rounded-md` 是 14px，不是 6px。不要写死圆角，引用这些 token。
+图标 1.5–2px 描边、圆头端点，尺寸取 14/16/20px，与 `label-md` 保持同一视觉基线。
+
+## Components
+
+**安静按钮**（`.tap-button`）是默认的操作控件：胶囊、4px/11px 内边距、12px 标签、
+细边框、半透明填充。它在 hover 之前不宣示任何存在感；hover 时边框加强、填充升到
+`surface`/0.88。它的主操作变体（`.tap-button-quiet-primary`）只把**文字**染成 `accent`
+并加上强调色发光——它仍然是一个安静按钮。禁用态是 `opacity: 0.4` 加
+`cursor: not-allowed`；不要再单独把标签置灰。
+
+**实心按钮**（shadcn `button-primary`，近黑底上的青）每屏最多一个：表单或弹窗的提交动作。
+画布上优先用安静主操作按钮。
+
+**Chip**（`.tap-chip`）是带弱化文字的胶囊；`data-state="active"` 时文字翻成 `accent`，
+底色变 `accent`/0.22 填充并加 1px 强调色 ring。激活状态由 `data-state` 承载，不用类名开关，
+这样 React Flow 的 portal 也能被样式命中。
+
+**输入框**（`.tap-field` / `.ui-field`）是 `surface-field` 上 12px 圆角的输入，静止态无可见描边；
+聚焦时加 0.5 alpha 的强调色边框和 3px 强调色 ring。占位符和辅助文字有专属 token
+（`--canvas-node-input-placeholder`、`--canvas-node-input-helper`），
+让节点输入压在玻璃上仍然可读——用它们，不要用 `text-muted`。
+
+**画布节点**是 Level 1 表面，14px 圆角、12px 沟槽。选中态是强调色 ring 加强调色标题；
+绝不用投影——那读起来像正在拖拽。
+
+**Popover / 下拉 / tooltip** 用不透明的 `card` 表面配 `ui-border`、16px 圆角，
+hover 行用 shadcn 的 `accent`（#0e333c）——刻意不用画布的蓝强调色，
+因为它们渲染在语义色板里。
+
+## Do's and Don'ts
+
+- **要**从 `frontend/src/index.css` 的 CSS 变量里读颜色、圆角、间距、动效。
+  **不要**在组件里写死 hex、px 圆角或 ms 时长——写死字面量正是两套色板开始漂移的方式。
+- **要**按「表面归属哪套色板」决定用樱粉还是品红（画布 → `accent` 樱粉，shadcn 原语 →
+  `primary` 品红）。**不要**再引入青色或第三强调色。
+- **要**保证一屏只有一个高饱和元素。**不要**把实心主按钮、激活 chip、发光节点堆在一起——
+  眼睛会找不到主体。
+- **要**用 `rgb(var(--x-rgb) / a)` 合成半透明，这样一条声明同时适配两种主题。
+  **不要**在组件里手写 `rgba(255,255,255,0.05)`；用 `--ui-border-soft` /
+  `--ui-border-strong`。
+- **要**在压住画布的半透明面板上配 `.backdrop-blur-tap`。**不要**给全屏模态加模糊，
+  也不要嵌两层模糊——第二层模糊要付一次全视口合成的代价，却看不出差别。
+- **要**让任何用户必须读的文字满足 WCAG AA（4.5:1）。有四处**已知欠账**已经实测记录，
+  它们是债务而不是先例——不要把这些比值抄进新组件：
+  - `chip` 静止态标签，`text-muted` 压在 chip 填充上——**3.83:1**
+    （「未激活就安静」的意图，但对必读标签而言低于 AA）
+  - `status-failed`，`destructive` #ea4335 压在 `muted` 上——**4.12:1**
+    （暗色下的错误文字；修法是文字改用更亮的红，填充保留 #ea4335）
+  - `button-quiet-primary-light`，`light-accent` #3b82f6 压在 `light-surface` 上——
+    **3.37:1**（亮色模式最薄弱的一环）
+  - `badge-muted-light`，`light-muted-foreground` 压在 `light-muted` 上——**4.14:1**
+- **要**放心用 `body-sm`（12px）承载元信息，中英混排一律用 `body-md`（14px）。
+  **不要**低于 12px，也不要在同一个面板里用超过两种字重。
+- **要**把 hover 反馈控制在 150ms 内、面板入场 220ms 并配 `ease-out-quint`。
+  **不要**在画布表面上动画 `width`/`height`/`top`/`left`——只动 transform 和 opacity。
+- **要**在收工前验两套主题：给 `<html>` 切 `.dark`，重点看玻璃表面——它们是亮色下
+  最先崩的东西。
+
+## Scope & Exceptions
+
+本文件默认约束的是**登录之后的产品界面**——画布、面板、列表、弹窗，一切用户开一整天的东西。
+未登录就能访问的**对外落地页**是唯一的例外区，因为它们的任务不同：产品界面要让人忘记界面本身，
+落地页要在十秒内说服一个还没有账号的人。用工作台的 token 去做落地页，结果是一张没人会转发的
+说明书。
+
+例外仅限以下两处，**是白名单，不是「凡是新页面都能声明例外」**：
+
+- `/download` — `src/components/download/download.module.css`、`DownloadCanvasPreview.tsx`
+- `/login` — `src/components/login/login.module.css`、`poster-wall.module.css`、`light-rays.css`
+
+新增落地页要进这份白名单，必须同 commit 更新本节。任何登录后可达的界面一律不在其中，
+包括从落地页跳进去的第一屏。
+
+### 例外区内允许的偏离
+
+- **自带色板，不引 `index.css` 的 token。** 下载页取自品牌 DC 标的材质——镀锌钢
+  （`--zinc` #a8b4be）加锈蚀氧化（`--rust` #d9603a / `--rust-hot` #ee7549）。
+  这确实是第三个强调色，只在例外区内成立：**`rust` 一族不得出现在任何产品界面里**，
+  且在页内继续守「一屏一个主导高饱和元素」——静止态的锈橙只给 hero 的 `DC` 字样、
+  「你的系统」标记、主下载按钮、hero 底部校准条，以及预览 SVG 里正在渲染的那个节点；
+  其余出现的地方只能是焦点环和 hover 反馈。
+- **拉丁字形用 Geist Variable**（`@fontsource-variable/geist`），CJK 回退链不变。
+  字体只能随落地页的 lazy chunk 加载；一旦它出现在主 chunk 里，例外就失效了。
+- **元信息层可以低到 10px，包括中文标签。** 落地页是海报式排版，行宽和留白都远大于工作台，
+  等宽刻度字压到 10–11.5px 才有仪器感：眉标（`.eyebrow` 11px）、规格表键名（`.spec dl` 11.5px）、
+  校验和值与说明（10.5 / 11px）、更新日志时间（11.5px）。边界：**这一档只给「扫一眼就够、
+  不需要逐字读」的标签**——凡是需要读完的段落，字号仍守住产品的 12px 下限
+  （落地页实测 12.5–17px：`.heroNote` 12.5px、`.capabilityCell p` / `.changelog p` 13.5px、
+  `.faqAnswer` 14px、hero 正文 16–17px）。中文在 11px 是有代价的，别把这一档扩大到正文。
+- **进场与装饰动效可以超过 320ms。** 区块进场 700ms、hero 校准条推进 1400ms，都配
+  `cubic-bezier(0.16,1,0.3,1)` 减速，且只允许动 `opacity` / `transform` / `width`。
+  交互反馈也放宽了一档：hover / 焦点 / 展开走 140–240ms，而不是产品界面的 150ms 上限——
+  落地页的元素更大、位移更长，150ms 会显得生硬。边界：**交互反馈的上限仍是产品的 320ms
+  `--duration-slow`**，超过 320ms 的只能是一次性进场和装饰动画；依然禁 bounce / elastic。
+- **允许营销渐变与装饰图形。** hero 与卡片底纹用 radial / linear 渐变，画布预览是一张内联 SVG。
+
+### 例外区内依然不许违反的
+
+- 暗色优先。落地页锁死深色，不提供亮色变体。
+- 用户必须读的文字满足 WCAG AA（4.5:1）。
+- body 永不横向滚动；宽内容自带 `overflow-x: auto`。
+- `@media (prefers-reduced-motion: reduce)` 必须把动画关掉——超长动效正是这条不能省的原因。
+- 例外区的样式必须收在自己的样式文件里（优先 CSS Module；`light-rays.css` 这类页面私有全局
+  CSS 要保证类名带页面前缀）。**不得反向修改 `index.css` 的全局变量**，也不得把落地页的类名
+  泄漏到产品界面。
+
+`design.md lint` 只校验本文件自身，不读 CSS，所以这一节是靠 review 执行的约定，不是靠工具。
+评审落地页时看这一节；评审其余界面时，这一节不适用。
+
+## Linting
+
+```bash
+npx @google/design.md lint DESIGN.md          # 0 errors 是准入线
+npx @google/design.md diff old.md DESIGN.md   # token 级视觉回归
+npx @google/design.md export DESIGN.md --format css-vars   # 或 tailwind | dtcg
+```
+
+预期基线：**0 errors，15 warnings。** 其中 4 条是上面列出的实测对比度欠账；
+11 条是 `orphaned-tokens`，落在 `border` / `border-soft` / `border-strong` /
+`ui-border` / `light-border` / `light-ui-border` / `chart-1..5` 上——
+alpha 版规范既没有 border 属性也没有图表序列概念，这些 token 无法被 component 引用。
+**不要为了消警告删掉它们**，它们在 `index.css` 里是承重的。
+出现任何**新的 error**，或 warning 数超过 15，都意味着回归。
