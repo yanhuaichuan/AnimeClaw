@@ -46,7 +46,7 @@ export function useTasks(filter?: UseTasksFilter) {
     },
     // Task state is live operational data, not ordinary page data. Never
     // inherit the app-wide 30s freshness window: entering a task-aware page
-    // (notably 虾料 during ingest) must reconcile against the server now.
+    // (notably 漫料 during ingest) must reconcile against the server now.
     staleTime: 0,
     refetchOnMount: "always",
     // 2s when any task is active for near-real-time updates, 30s otherwise.

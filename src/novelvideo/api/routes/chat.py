@@ -265,7 +265,7 @@ def _completion_text_or_existing(event_text: object, existing: str) -> str:
 def _is_completion_notice(text: str) -> bool:
     return text in {
         "当前任务已开始处理。请稍后让我查看当前任务进度，或在任务完成后再继续下一步。",
-        "刚才这一步没有成功启动任务。请先根据返回的错误补齐前置条件；如果是配音缺少声线，可以到「虾塘」上传或录制缺失声线后再继续。",
+        "刚才这一步没有成功启动任务。请先根据返回的错误补齐前置条件；如果是配音缺少声线，可以到「漫塘」上传或录制缺失声线后再继续。",
     }
 
 

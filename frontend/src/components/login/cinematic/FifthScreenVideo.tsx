@@ -63,7 +63,7 @@ export function FifthScreenVideo({
       <div className={styles.copy}>
         <h2>把万千灵感沉淀为资产</h2>
         <p className={styles.body}>
-          DramaClaw 把它们整理成项目资产库，
+          AnimeClaw 把它们整理成项目资产库，
           让后续镜头生成可以持续引用、统一维护、必要时回滚版本。
         </p>
       </div>

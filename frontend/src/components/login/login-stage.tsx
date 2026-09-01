@@ -26,7 +26,7 @@ export function Brand({ className }: { className?: string }) {
   return (
     <div className={className ?? styles.brand} aria-label="AnimeClaw">
       <span className="animeclaw-wordmark">
-        <span className="animeclaw-wordmark__mark">AC</span>
+        <img className="animeclaw-wordmark__mark-img" src="/brand/animeclaw-mark.svg" alt="" />
         <span className="animeclaw-wordmark__name">AnimeClaw</span>
       </span>
     </div>

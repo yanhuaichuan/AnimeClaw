@@ -195,7 +195,7 @@ def test_project_task_serialization_prefers_business_display_name() -> None:
     payload = _serialize_task(task)
 
     assert payload["display_name"] == "生成草图 · EP1 / Beat 3"
-    assert payload["task_type_label"] == "虾画编辑"
+    assert payload["task_type_label"] == "漫画编辑"
     assert payload["metadata"]["source_label"] == "导演合成图"
 
 

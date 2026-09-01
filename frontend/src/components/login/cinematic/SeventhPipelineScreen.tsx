@@ -77,11 +77,11 @@ export function SeventhPipelineScreen({
         <p>PIPELINE 07</p>
         <h2>让短剧生成从抽卡走向流程</h2>
         <span>
-          DramaClaw 把 AI 视频创作中的不确定性拆解到文本、资产、镜头和任务流程中
+          AnimeClaw 把 AI 视频创作中的不确定性拆解到文本、资产、镜头和任务流程中
         </span>
       </div>
 
-      <div className={styles.pipeline} aria-label="DramaClaw production pipeline">
+      <div className={styles.pipeline} aria-label="AnimeClaw production pipeline">
         <div className={styles.track} aria-hidden="true" />
         <div className={styles.trackFill} aria-hidden="true" />
         {steps.map((step, index) => {

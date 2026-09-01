@@ -748,7 +748,7 @@ function SceneAssetCardController({
       toast.error(res.error);
       return;
     }
-    toast.success("Scene master uploaded");
+    toast.success(t("assets.scenes.masterUploaded"));
   }
 
   async function handlePanoFile(file: File | undefined) {
@@ -758,7 +758,7 @@ function SceneAssetCardController({
       toast.error(res.error);
       return;
     }
-    toast.success("360 uploaded");
+    toast.success(t("assets.scenes.panoUploaded"));
   }
 
   async function handleCustomFile(file: File | undefined) {
@@ -768,7 +768,7 @@ function SceneAssetCardController({
       toast.error(res.error);
       return;
     }
-    toast.success("Custom scene package uploaded");
+    toast.success(t("assets.scenes.customPackageUploaded"));
   }
 
   async function handleGenerateMaster() {
@@ -840,7 +840,7 @@ function SceneAssetCardController({
       toast.error(res.error);
       return;
     }
-    toast.success("Scene master deleted");
+    toast.success(t("assets.scenes.masterDeleted"));
   }
 
   async function handleDeletePano() {
@@ -849,7 +849,7 @@ function SceneAssetCardController({
       toast.error(res.error);
       return;
     }
-    toast.success("360 deleted");
+    toast.success(t("assets.scenes.panoDeleted"));
   }
 
   async function handleOpenFreezone() {
@@ -885,7 +885,7 @@ function SceneAssetCardController({
       toast.error(res.error);
       return;
     }
-    toast.success("Custom scene package deleted");
+    toast.success(t("assets.scenes.customPackageDeleted"));
   }
 
   async function handleScenePanoCapture(result: PanoCaptureResult) {

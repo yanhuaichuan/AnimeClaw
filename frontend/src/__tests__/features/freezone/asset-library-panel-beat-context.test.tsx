@@ -39,7 +39,7 @@ vi.mock("@/lib/queries/product-surfaces", () => ({
     code === "mainline"
       ? {
           surface_code: "mainline",
-          label: "虾集",
+          label: "漫集",
           available: mainlineAvailable,
           unavailable_message: "",
         }

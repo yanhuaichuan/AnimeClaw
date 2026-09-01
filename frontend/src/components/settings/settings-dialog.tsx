@@ -15,12 +15,14 @@ import {
   Loader2,
   Maximize2,
   Minimize2,
+  Palette,
   Pencil,
   Plus,
   RotateCw,
   Search,
   Trash2,
 } from "lucide-react";
+import { AppearanceSection } from "@/components/settings/appearance-section";
 
 import {
   Dialog,
@@ -110,7 +112,7 @@ const COMFY_WORKFLOW_MANAGED_CONFIG_KEY = "_dcManagedByWorkflow";
 
 export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
   const { t } = useTranslation();
-  const [page, setPage] = useState<"models" | "storage">("models");
+  const [page, setPage] = useState<"models" | "storage" | "appearance">("models");
   const [modelConfigApplying, setModelConfigApplying] = useState(false);
   const statusQuery = useModelGatewayConfig(open);
   const settingsStatus = statusQuery.data?.data;
@@ -155,7 +157,7 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
     >
       <DialogContent
         showCloseButton={!modelConfigApplying}
-        className="flex h-[min(82vh,760px)] max-w-[calc(100%-2rem)] flex-col gap-0 overflow-hidden rounded-lg border border-border bg-black p-0 ring-0 sm:max-w-[1120px]"
+        className="flex h-[min(82vh,760px)] max-w-[calc(100%-2rem)] flex-col gap-0 overflow-hidden rounded-lg border border-border bg-background p-0 ring-0 sm:max-w-[1120px]"
       >
         <DialogHeader className="border-b border-border px-5 py-4">
           <DialogTitle>{t("settings.title")}</DialogTitle>
@@ -174,8 +176,8 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
               className={cn(
                 "relative flex h-10 items-center justify-center gap-2 rounded-md px-2 text-sm font-medium transition-colors sm:justify-start sm:px-3",
                 page === "models"
-                  ? "bg-white/[0.09] text-foreground"
-                  : "text-muted-foreground hover:bg-white/[0.05] hover:text-foreground",
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground hover:bg-muted/70 hover:text-foreground",
               )}
             >
               <Cpu className="size-4" aria-hidden />
@@ -192,8 +194,8 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
               className={cn(
                 "relative flex h-10 items-center justify-center gap-2 rounded-md px-2 text-sm font-medium transition-colors sm:justify-start sm:px-3",
                 page === "storage"
-                  ? "bg-white/[0.09] text-foreground"
-                  : "text-muted-foreground hover:bg-white/[0.05] hover:text-foreground",
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground hover:bg-muted/70 hover:text-foreground",
               )}
             >
               <HardDrive className="size-4" aria-hidden />
@@ -201,6 +203,23 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                 {t("settings.pages.storage")}
               </span>
               {pageStatus(mediaStorageConfigured, t("settings.pages.storage"))}
+            </button>
+            <button
+              type="button"
+              aria-current={page === "appearance" ? "page" : undefined}
+              onClick={() => setPage("appearance")}
+              disabled={modelConfigApplying}
+              className={cn(
+                "relative flex h-10 items-center justify-center gap-2 rounded-md px-2 text-sm font-medium transition-colors sm:justify-start sm:px-3",
+                page === "appearance"
+                  ? "bg-muted text-foreground"
+                  : "text-muted-foreground hover:bg-muted/70 hover:text-foreground",
+              )}
+            >
+              <Palette className="size-4" aria-hidden />
+              <span className="hidden sm:inline">
+                {t("settings.pages.appearance")}
+              </span>
             </button>
           </nav>
 
@@ -215,10 +234,16 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                 {SHOW_CODEX_BRIDGE && <CodexBridgeSection />}
               </ScrollArea>
             </div>
-          ) : (
+          ) : page === "storage" ? (
             <div className="min-w-0 flex-1">
               <ScrollArea className="h-full [&_[data-slot=scroll-area-scrollbar]]:!w-1 [&_[data-slot=scroll-area-scrollbar]]:!border-l-0 [&_[data-slot=scroll-area-scrollbar]]:!p-0">
                 <MediaStorageSection />
+              </ScrollArea>
+            </div>
+          ) : (
+            <div className="min-w-0 flex-1">
+              <ScrollArea className="h-full [&_[data-slot=scroll-area-scrollbar]]:!w-1 [&_[data-slot=scroll-area-scrollbar]]:!border-l-0 [&_[data-slot=scroll-area-scrollbar]]:!p-0">
+                <AppearanceSection />
               </ScrollArea>
             </div>
           )}

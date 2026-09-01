@@ -31,6 +31,8 @@ if TYPE_CHECKING:
 PROJECT_TRASH_DIRNAME = "_trash"
 ACCOUNT_ASSET_DIRNAME = "_account"
 RESERVED_PROJECT_PREFIX = "_"
+_MAX_PROJECT_NAME_LEN = 64
+_PROJECT_NAME_RE = re.compile(r"^[A-Za-z0-9_\u4e00-\u9fff\u3400-\u4dbf]+$")
 
 
 @dataclass(frozen=True)
@@ -139,11 +141,15 @@ def may_run_asset_repair(ctx: ProjectContext | None) -> bool:
 
 
 def validate_project_name(name: str):
-    """验证项目名称格式。"""
-    if not name or not re.match(r"^[a-zA-Z0-9_]+$", name):
+    """验证项目名称格式。允许中文、字母、数字和下划线。"""
+    if (
+        not name
+        or len(name) > _MAX_PROJECT_NAME_LEN
+        or not _PROJECT_NAME_RE.match(name)
+    ):
         raise HTTPException(
             status_code=400,
-            detail="Project name must contain only letters, digits, and underscores",
+            detail="Project name must contain only letters, digits, underscores, or Chinese characters",
         )
     if name.startswith(RESERVED_PROJECT_PREFIX):
         raise HTTPException(

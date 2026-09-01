@@ -30,7 +30,7 @@ export function CreditBalanceBadge() {
   const summaryQuery = useCreditSummary(Boolean(username) && !ce);
   const summary = summaryQuery.data?.data;
   const balance = summary?.balance ?? data?.data.credit_balance;
-  const language = i18n?.resolvedLanguage ?? i18n?.language ?? "en";
+  const language = i18n?.resolvedLanguage ?? i18n?.language ?? "zh";
 
   useEffect(
     () => () => {

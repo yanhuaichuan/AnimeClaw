@@ -108,8 +108,8 @@ _DRAMACLAW_SCRIPT_UPLOAD_MODEL_REPLY_INSTRUCTIONS = """[DRAMACLAW_SCRIPT_UPLOAD_
 
 回复目标：
 - 语气自然，不要像系统错误提示。
-- 明确表达：虾导不提供生成剧本功能。
-- 引导用户去“虾料”上传已有剧本文档。
+- 明确表达：漫导不提供生成剧本功能。
+- 引导用户去“漫料”上传已有剧本文档。
 - 说明上传后你可以继续帮他推进分集、画面、配音、成片等后续制作。
 - 只回复 1-2 句，不要列步骤，不要输出 markdown 标题。
 [/DRAMACLAW_SCRIPT_UPLOAD_GUIDANCE]
@@ -894,7 +894,7 @@ def _completion_text_or_existing(event_text: object, existing: str) -> str:
 def _is_completion_notice(text: str) -> bool:
     return text in {
         "当前任务已开始处理。请稍后让我查看当前任务进度，或在任务完成后再继续下一步。",
-        "刚才这一步没有成功启动任务。请先根据返回的错误补齐前置条件；如果是配音缺少声线，可以到「虾塘」上传或录制缺失声线后再继续。",
+        "刚才这一步没有成功启动任务。请先根据返回的错误补齐前置条件；如果是配音缺少声线，可以到「漫塘」上传或录制缺失声线后再继续。",
     }
 
 
@@ -1437,7 +1437,7 @@ def _extract_tool_chat_error(value: Any) -> str | None:
         if "Render 模式需要草图" in raw or "未生成可用图片" in raw:
             return (
                 "Render 任务没有生成可用图片：当前缺少必要草图前置。"
-                "请先在「虾塘」生成或确认对应 Beat 的草图后，再重新生成 Render。"
+                "请先在「漫塘」生成或确认对应 Beat 的草图后，再重新生成 Render。"
                 f"\n\n错误原因：{raw[:1200]}"
             )
         return None

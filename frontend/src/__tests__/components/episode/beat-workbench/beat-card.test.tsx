@@ -13,7 +13,7 @@ vi.mock("react-i18next", () => ({
       if (key === "episode.beat.select") return "选择 Beat";
       if (key === "episode.beat.deselect") return "取消选择 Beat";
       if (key === "episode.beat.insertAfter") return `在第 ${vars?.n} 个 beat 后插入`;
-      if (key === "episode.beat.openFreezone") return "进入虾画 Beat 工作台";
+      if (key === "episode.beat.openFreezone") return "进入漫画 Beat 工作台";
       return key;
     },
   }),
@@ -114,10 +114,10 @@ describe("BeatCard", () => {
     const onOpenFreezone = vi.fn();
     const { onCardClick } = renderBeatCard({ onOpenFreezone });
 
-    await user.click(screen.getByRole("button", { name: "进入虾画 Beat 工作台" }));
+    await user.click(screen.getByRole("button", { name: "进入漫画 Beat 工作台" }));
 
     expect(onOpenFreezone).toHaveBeenCalledWith(4, "frame");
     expect(onCardClick).not.toHaveBeenCalled();
-    expect(screen.queryByText("进入虾画 Beat 工作台")).not.toBeInTheDocument();
+    expect(screen.queryByText("进入漫画 Beat 工作台")).not.toBeInTheDocument();
   });
 });

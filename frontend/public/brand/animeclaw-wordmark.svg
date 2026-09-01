@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" role="img" aria-label="AnimeClaw +gå‚">
+  <defs>
+    <linearGradient id="ac-wm-bg" x1="8" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2a1220"/>
+      <stop offset="1" stop-color="#12080e"/>
+    </linearGradient>
+    <linearGradient id="ac-wm-petal" x1="18" y1="14" x2="48" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff8cc8"/>
+      <stop offset=".48" stop-color="#ff5ea8"/>
+      <stop offset="1" stop-color="#7c5cff"/>
+    </linearGradient>
+    <linearGradient id="ac-wm-claw" x1="12" y1="20" x2="52" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe3f2"/>
+      <stop offset="1" stop-color="#ff7ab6"/>
+    </linearGradient>
+    <linearGradient id="ac-wm-name" x1="78" y1="18" x2="300" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe3f2"/>
+      <stop offset=".55" stop-color="#ff7ab6"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0 6)">
+    <rect width="52" height="52" rx="14" fill="url(#ac-wm-bg)"/>
+    <rect x="9" y="9" width="34" height="34" rx="3.5" fill="none" stroke="#ff8cc8" stroke-opacity=".35" stroke-width="1.25"/>
+    <path d="M12 16h14M12 16v13" fill="none" stroke="#c4b5fd" stroke-opacity=".55" stroke-width="1.1"/>
+    <path d="M30 13c3.4 2.5 5.3 6.8 3.9 10.7-1.4 3.7-5.7 5.7-9.9 4.7 1.9-1.3 3.1-3.6 2.6-6-.5-2.5-2.4-4.5-4.9-5.2 2.9-2.2 6-4.2 8.3-4.2z" fill="url(#ac-wm-petal)"/>
+    <path d="M15 34c6.1-1.8 12-6.8 15.2-12.6" fill="none" stroke="url(#ac-wm-claw)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M18 39c6.6-1.1 13.4-5.8 17.3-11.6" fill="none" stroke="url(#ac-wm-claw)" stroke-width="1.9" stroke-linecap="round" opacity=".85"/>
+  </g>
+  <text x="66" y="34" fill="url(#ac-wm-name)" font-family="Avenir Next, Segoe UI, PingFang SC, sans-serif" font-size="26" font-weight="750" letter-spacing="-0.4">AnimeClaw</text>
+  <text x="68" y="54" fill="#ff8cc8" fill-opacity=".88" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="13" font-weight="600" letter-spacing="3.2">+gå‚</text>
+</svg>

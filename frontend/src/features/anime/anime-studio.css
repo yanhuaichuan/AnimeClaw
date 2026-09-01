@@ -379,19 +379,11 @@
   min-width: 0;
 }
 
-.animeclaw-wordmark__mark {
-  display: grid;
-  place-items: center;
+.animeclaw-wordmark__mark,
+.animeclaw-wordmark__mark-img {
   width: 22px;
   height: 22px;
   border-radius: 7px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: #1a0d16;
-  background:
-    linear-gradient(135deg, #ff8cc8 0%, #ff5ea8 46%, #7c5cff 100%);
-  box-shadow: 0 0 16px rgb(255 122 182 / 0.35);
 }
 
 .animeclaw-wordmark__name {

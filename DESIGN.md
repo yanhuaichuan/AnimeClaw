@@ -36,18 +36,18 @@ colors:
   chart-4: "#f472b6"
   chart-5: "#a78bfa"
   # ── 亮色主题（来源：:root 块）——角色相同，取值更亮 ──
-  light-background: "#fffafd"
-  light-surface: "#faf4f8"
-  light-border: "#e8d6e2"
-  light-text: "#1a0d16"
-  light-text-muted: "#7a6070"
+  light-background: "#ffffff"
+  light-surface: "#fafafa"
+  light-border: "#e5e5e5"
+  light-text: "#171717"
+  light-text-muted: "#52525b"
   light-accent: "#e11d74"
   light-primary: "#c2185b"
-  light-foreground: "#111b21"
+  light-foreground: "#171717"
   light-card: "#ffffff"
-  light-muted: "#f0f2f5"
-  light-muted-foreground: "#667781"
-  light-ui-border: "#e9edef"
+  light-muted: "#f4f4f5"
+  light-muted-foreground: "#52525b"
+  light-ui-border: "#e5e5e5"
 typography:
   display-lg:
     fontFamily: Inter
@@ -247,7 +247,7 @@ components:
     height: 36px
   button-quiet-primary-light:
     backgroundColor: "{colors.light-surface}"
-    textColor: "{colors.light-accent}"
+    textColor: "{colors.light-primary}"
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
   badge-muted-light:
@@ -267,7 +267,7 @@ components:
 
 ## Overview
 
-AnimeClaw（漫剧工厂）是 DramaClaw 之上的漫剧工作台：角色圣经、分镜、连续性、任务队列。
+AnimeClaw（漫剧工厂）是漫剧工作台：角色圣经、分镜、连续性、任务队列。
 用户是会把工具开一整天的创作者，所以 UI 定性为**暗色优先、信息密集、克制，但带樱色漫剧气质**——
 `theme: 'dark'` 是持久化的默认值，亮色是受支持的备选，不是主战场。
 
@@ -304,8 +304,8 @@ AnimeClaw（漫剧工厂）是 DramaClaw 之上的漫剧工作台：角色圣经
   画布表面用 `accent`，shadcn 原语用 `primary`。按「表面归属哪套色板」来选，不要另起青色。
 - 静止表面上彩度必须低。shadcn 的 `secondary` / `accent` 是带品红调的灰
   （暗色 #3a1f3a），正是为了让下拉和 Tab 的 hover 态足够安静。
-- 亮色模式把 `background` 翻成微粉白 #fffafd、`text` 翻成墨黑 #1a0d16，强调色换 `light-accent` #e11d74；
-  `card` 变纯白，衬在浅粉灰的页面底上。
+- 亮色模式把 `background` 翻成干净白 #ffffff、`text` 翻成近黑 #171717，强调色仍用 `light-accent` #e11d74；
+  `card` 与页面同为纯白，节点等次级表面用极浅灰 `light-surface` #fafafa，避免粉灰脏感。
 - `chart-1` … `chart-5` 是唯一批准的数据序列色，走「樱 → 紫 → 玫 → 粉 → 堇」，
   保证同一色系不重复出现。
 
@@ -422,14 +422,12 @@ hover 行用 shadcn 的 `accent`（#0e333c）——刻意不用画布的蓝强�
   `--ui-border-strong`。
 - **要**在压住画布的半透明面板上配 `.backdrop-blur-tap`。**不要**给全屏模态加模糊，
   也不要嵌两层模糊——第二层模糊要付一次全视口合成的代价，却看不出差别。
-- **要**让任何用户必须读的文字满足 WCAG AA（4.5:1）。有四处**已知欠账**已经实测记录，
+- **要**让任何用户必须读的文字满足 WCAG AA（4.5:1）。有三处**已知欠账**已经实测记录，
   它们是债务而不是先例——不要把这些比值抄进新组件：
   - `chip` 静止态标签，`text-muted` 压在 chip 填充上——**3.83:1**
     （「未激活就安静」的意图，但对必读标签而言低于 AA）
   - `status-failed`，`destructive` #ea4335 压在 `muted` 上——**4.12:1**
     （暗色下的错误文字；修法是文字改用更亮的红，填充保留 #ea4335）
-  - `button-quiet-primary-light`，`light-accent` #3b82f6 压在 `light-surface` 上——
-    **3.37:1**（亮色模式最薄弱的一环）
   - `badge-muted-light`，`light-muted-foreground` 压在 `light-muted` 上——**4.14:1**
 - **要**放心用 `body-sm`（12px）承载元信息，中英混排一律用 `body-md`（14px）。
   **不要**低于 12px，也不要在同一个面板里用超过两种字重。
@@ -497,9 +495,9 @@ npx @google/design.md diff old.md DESIGN.md   # token 级视觉回归
 npx @google/design.md export DESIGN.md --format css-vars   # 或 tailwind | dtcg
 ```
 
-预期基线：**0 errors，15 warnings。** 其中 4 条是上面列出的实测对比度欠账；
+预期基线：**0 errors，12 warnings。** 其中 1 条是上面列出的实测对比度欠账；
 11 条是 `orphaned-tokens`，落在 `border` / `border-soft` / `border-strong` /
 `ui-border` / `light-border` / `light-ui-border` / `chart-1..5` 上——
 alpha 版规范既没有 border 属性也没有图表序列概念，这些 token 无法被 component 引用。
 **不要为了消警告删掉它们**，它们在 `index.css` 里是承重的。
-出现任何**新的 error**，或 warning 数超过 15，都意味着回归。
+出现任何**新的 error**，或 warning 数超过 12，都意味着回归。

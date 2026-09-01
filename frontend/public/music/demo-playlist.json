@@ -1,0 +1,45 @@
+{
+  "name": "漫剧工厂 · 工作氛围",
+  "tracks": [
+    {
+      "title": "Gymnopedie No. 1",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/gymnopedie-no-1-by-kevin-macleod/gymnopedie-no-1-by-kevin-macleod.mp3"
+    },
+    {
+      "title": "Local Forecast",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/local-forecast-by-kevin-macleod/local-forecast-by-kevin-macleod.mp3"
+    },
+    {
+      "title": "Spellbound",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/Spellbound_201610/Spellbound.mp3"
+    },
+    {
+      "title": "In a Heartbeat",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/InAHeartbeat/InAHeartbeat.mp3"
+    },
+    {
+      "title": "New Friendly",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/new-friendly/New%20Friendly.mp3"
+    },
+    {
+      "title": "Sunshine",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/Sunshine_637/Sunshine.mp3"
+    },
+    {
+      "title": "Sneaky Snitch",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/kevin-mac-leod-ss/Kevin%20MacLeod%20-%20Sneaky%20Snitch.mp3"
+    },
+    {
+      "title": "Fluffing a Duck",
+      "artist": "Kevin MacLeod",
+      "url": "https://archive.org/download/kevin.macleod-fad/Kevin%20MacLeod%20-%20Fluffing%20a%20Duck.mp3"
+    }
+  ]
+}

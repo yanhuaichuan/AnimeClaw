@@ -2,10 +2,8 @@
  * Copyright (c) 2026 ClaymoreLab
  *
  * 下载页样式。与登录页同属对外落地页,不走应用内主题 token:
- * 这一页锁死深色,配色取自品牌 DC 标本身的材质 —— 镀锌钢板(锌灰刻度)
- * 加锈蚀氧化(锈橙)。静止态的锈橙只给 hero 的 DC 字样、「你的系统」标记、
- * 主下载按钮、hero 底部校准条和预览里渲染中的节点;其余只能是焦点环和
- * hover 反馈。偏离主规范的边界见 DESIGN.md 的 Scope & Exceptions。
+ * 这一页锁死深色,配色取自 AnimeClaw 墨黑底 + 樱粉强调。
+ * 偏离主规范的边界见 DESIGN.md 的 Scope & Exceptions。
  */
 
 .page {
@@ -158,7 +156,7 @@
 
 .brandWordmark {
   display: block;
-  height: 15px;
+  height: 28px;
   width: auto;
   opacity: 0.92;
 }
@@ -817,7 +815,7 @@
 }
 
 .footerWordmark {
-  height: 13px;
+  height: 24px;
   width: auto;
   opacity: 0.55;
 }

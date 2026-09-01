@@ -229,7 +229,7 @@ export function CanvasHistoryAssetsModal({
   // Image lightbox state (drives the shared ImageViewerModal nav list).
   const [imageViewerIndex, setImageViewerIndex] = useState<number | null>(null);
   const [videoViewerUrl, setVideoViewerUrl] = useState<string | null>(null);
-  // 世界模型「查看」：用产物 url 现搭一个最小 manifest，直接开虾境（导演台）。
+  // 世界模型「查看」：用产物 url 现搭一个最小 manifest，直接开漫境（导演台）。
   const [worldManifest, setWorldManifest] = useState<DirectorStageManifest | null>(null);
   // Full-prompt dialog (opened by clicking a card's compact prompt caption).
   const [promptDialogText, setPromptDialogText] = useState<string | null>(null);
@@ -333,7 +333,7 @@ export function CanvasHistoryAssetsModal({
     } else if (asset.kind === 'video') {
       setVideoViewerUrl(asset.url);
     } else if (asset.kind === 'model') {
-      // 直接进虾境：历史记录只有产物 url，没有节点的 sources/场景编辑，临时搭一个
+      // 直接进漫境：历史记录只有产物 url，没有节点的 sources/场景编辑，临时搭一个
       // 最小 scene-mode manifest 打开导演台（仅看裸 3GS / 360 全景）。
       const project = readUrl().project;
       if (!project) return;
@@ -711,7 +711,7 @@ export function CanvasHistoryAssetsModal({
         onClose={() => setVideoViewerUrl(null)}
       />
 
-      {/* 世界模型「查看」：进虾境（导演台）只读浏览。历史产物没有可保存的源节点，
+      {/* 世界模型「查看」：进漫境（导演台）只读浏览。历史产物没有可保存的源节点，
           故不接 onSaveScene / onCapture* 回调（纯查看）。 */}
       <ThreeDDirectorDialog
         open={Boolean(worldManifest)}

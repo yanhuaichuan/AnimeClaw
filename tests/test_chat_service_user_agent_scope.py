@@ -1127,7 +1127,7 @@ def test_extract_tool_chat_error_maps_render_prereq_task_error():
 
     assert chat_error is not None
     assert "Render 任务没有生成可用图片" in chat_error
-    assert "虾塘" in chat_error
+    assert "漫塘" in chat_error
     assert raw_error in chat_error
 
 

@@ -46,7 +46,7 @@ export function writeUrl(next: Partial<FreezoneUrl>, options: WriteUrlOptions = 
   // leaving Freezone the router already reads /characters but window.location
   // still reads /freezone. Guarding on the stale window.location would let a
   // stray canvas-sync write here navigate the user BACK to Freezone, trapping
-  // them on 虾画. Read the pathname/canvas from the router so a write that
+  // them on 漫画. Read the pathname/canvas from the router so a write that
   // fires after the route has moved off Freezone simply no-ops.
   const currentPathname = router?.state.location.pathname;
   const pathProject = currentPathname

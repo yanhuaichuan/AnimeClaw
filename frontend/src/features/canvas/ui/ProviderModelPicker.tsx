@@ -79,7 +79,7 @@ export interface ModelOption {
 }
 
 export const SHARED_PROVIDERS: ProviderOption[] = [
-  { id: 'newapi', label: '虾驿 / NewAPI' },
+  { id: 'newapi', label: '漫驿 / NewAPI' },
   { id: 'huimeng', label: '绘梦 / HuiMeng' },
   { id: 'openrouter', label: 'OpenRouter' },
   { id: 'openai', label: 'OpenAI' },

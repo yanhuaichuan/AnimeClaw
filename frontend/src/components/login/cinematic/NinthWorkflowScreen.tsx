@@ -76,7 +76,7 @@ export function NinthWorkflowScreen({
           镜头
         </h2>
         <span>
-          不必先写完整剧本。给出一个方向，DramaClaw 会把它拆成角色、冲突、场景和可推进的镜头链路。
+          不必先写完整剧本。给出一个方向，AnimeClaw 会把它拆成角色、冲突、场景和可推进的镜头链路。
         </span>
       </div>
 
@@ -84,7 +84,7 @@ export function NinthWorkflowScreen({
         <span />
       </div>
 
-      <div className={styles.workflow} aria-label="DramaClaw workflow from prompt to clip">
+      <div className={styles.workflow} aria-label="AnimeClaw workflow from prompt to clip">
         {workflow.map((item, index) => {
           const itemProgress = clamp((sequenceProgress - index * 0.18) / 0.34);
           const isOutput = index === workflow.length - 1;

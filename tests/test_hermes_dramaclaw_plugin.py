@@ -61,7 +61,7 @@ def test_dramaclaw_plugin_adds_voice_prereq_chat_error():
 
     assert result["error"] == raw_error
     assert "配音任务没有成功启动" in result["chat_error"]
-    assert "虾塘" in result["chat_error"]
+    assert "漫塘" in result["chat_error"]
     assert raw_error in result["chat_error"]
     assert "Do not start another tool" in result["agent_instruction"]
 
@@ -88,6 +88,6 @@ def test_dramaclaw_plugin_adds_render_prereq_chat_error():
     task = result["data"][0]
     assert task["error"] == raw_error
     assert "Render 任务没有生成可用图片" in task["chat_error"]
-    assert "虾塘" in task["chat_error"]
+    assert "漫塘" in task["chat_error"]
     assert raw_error in task["chat_error"]
     assert "Do not start another tool" in task["agent_instruction"]

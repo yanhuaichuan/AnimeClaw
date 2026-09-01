@@ -20,7 +20,7 @@ export function ThirdScreenVideo({
       copyExitProgress={copyExitProgress}
       copyProgress={copyProgress}
       isActive={isActive}
-      kicker="CUT TO THE NEXT"
+      kicker="切到下一镜"
       subtitle="导入小说、剧本或分集文本后，系统自动识别，为后续资产提取、剧集规划和镜头拆解建立基础。"
       title="让故事成为起点"
       videoExitProgress={videoExitProgress}

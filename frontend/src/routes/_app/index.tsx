@@ -101,7 +101,7 @@ const SORT_OPTIONS: { value: SortKey; labelKey: string }[] = [
   { value: "name-desc", labelKey: "project.sort.nameDesc" },
 ];
 
-const PROJECT_NAME_PATTERN = /^[a-zA-Z0-9_]+$/;
+const PROJECT_NAME_PATTERN = /^[A-Za-z0-9_\u4e00-\u9fff\u3400-\u4dbf]{1,64}$/;
 
 const PROJECT_CARD_MIN_HEIGHT_CLASS = "min-h-[12.75rem]";
 const RECENTLY_CREATED_PROJECT_KEY = "supertale-dashboard-recent-created-project";
@@ -1193,7 +1193,7 @@ function ProjectDashboard() {
     }
   };
 
-  // 进项目恢复上次停留的区块（虾画 / 虾集子页，默认虾画）；上次在虾镜且
+  // 进项目恢复上次停留的区块（漫画 / 漫集子页，默认漫画）；上次在漫镜且
   // 有剧集深链则直达该集。
   const resolveProjectEntry = useCallback((project: string): string => {
     let section =

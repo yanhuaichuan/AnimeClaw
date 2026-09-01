@@ -19,10 +19,10 @@ import { Route as AppCreditsRouteImport } from './routes/_app/credits'
 import { Route as AppAccessUnavailableRouteImport } from './routes/_app/access-unavailable'
 import { Route as AppProjectsProjectTasksRouteImport } from './routes/_app/projects.$project/tasks'
 import { Route as AppProjectsProjectStylesRouteImport } from './routes/_app/projects.$project/styles'
-import { Route as AppProjectsProjectAnimeRouteImport } from './routes/_app/projects.$project/anime'
 import { Route as AppProjectsProjectIngestRouteImport } from './routes/_app/projects.$project/ingest'
 import { Route as AppProjectsProjectEpisodesRouteImport } from './routes/_app/projects.$project/episodes'
 import { Route as AppProjectsProjectAssistantRouteImport } from './routes/_app/projects.$project/assistant'
+import { Route as AppProjectsProjectAnimeRouteImport } from './routes/_app/projects.$project/anime'
 
 const DownloadLazyRouteImport = createFileRoute('/download')()
 const AppProjectsProjectFreezoneLazyRouteImport = createFileRoute(
@@ -119,12 +119,6 @@ const AppProjectsProjectStylesRoute =
     path: '/projects/$project/styles',
     getParentRoute: () => AppRoute,
   } as any)
-const AppProjectsProjectAnimeRoute =
-  AppProjectsProjectAnimeRouteImport.update({
-    id: '/projects/$project/anime',
-    path: '/projects/$project/anime',
-    getParentRoute: () => AppRoute,
-  } as any)
 const AppProjectsProjectIngestRoute =
   AppProjectsProjectIngestRouteImport.update({
     id: '/projects/$project/ingest',
@@ -143,6 +137,11 @@ const AppProjectsProjectAssistantRoute =
     path: '/projects/$project/assistant',
     getParentRoute: () => AppRoute,
   } as any)
+const AppProjectsProjectAnimeRoute = AppProjectsProjectAnimeRouteImport.update({
+  id: '/projects/$project/anime',
+  path: '/projects/$project/anime',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppProjectsProjectEpisodesEpisodeIndexLazyRoute =
   AppProjectsProjectEpisodesEpisodeIndexLazyRouteImport.update({
     id: '/$episode/',
@@ -231,11 +230,11 @@ export interface FileRoutesByFullPath {
   '/access-unavailable': typeof AppAccessUnavailableRoute
   '/credits': typeof AppCreditsRoute
   '/watch/$work': typeof WatchWorkRoute
+  '/projects/$project/anime': typeof AppProjectsProjectAnimeRoute
   '/projects/$project/assistant': typeof AppProjectsProjectAssistantRoute
   '/projects/$project/episodes': typeof AppProjectsProjectEpisodesRouteWithChildren
   '/projects/$project/ingest': typeof AppProjectsProjectIngestRoute
   '/projects/$project/styles': typeof AppProjectsProjectStylesRoute
-  '/projects/$project/anime': typeof AppProjectsProjectAnimeRoute
   '/projects/$project/tasks': typeof AppProjectsProjectTasksRoute
   '/projects/$project/characters': typeof AppProjectsProjectCharactersLazyRoute
   '/projects/$project/freezone': typeof AppProjectsProjectFreezoneLazyRoute
@@ -255,11 +254,11 @@ export interface FileRoutesByTo {
   '/credits': typeof AppCreditsRoute
   '/watch/$work': typeof WatchWorkRoute
   '/': typeof AppIndexRoute
+  '/projects/$project/anime': typeof AppProjectsProjectAnimeRoute
   '/projects/$project/assistant': typeof AppProjectsProjectAssistantRoute
   '/projects/$project/episodes': typeof AppProjectsProjectEpisodesRouteWithChildren
   '/projects/$project/ingest': typeof AppProjectsProjectIngestRoute
   '/projects/$project/styles': typeof AppProjectsProjectStylesRoute
-  '/projects/$project/anime': typeof AppProjectsProjectAnimeRoute
   '/projects/$project/tasks': typeof AppProjectsProjectTasksRoute
   '/projects/$project/characters': typeof AppProjectsProjectCharactersLazyRoute
   '/projects/$project/freezone': typeof AppProjectsProjectFreezoneLazyRoute
@@ -281,11 +280,11 @@ export interface FileRoutesById {
   '/_app/credits': typeof AppCreditsRoute
   '/watch/$work': typeof WatchWorkRoute
   '/_app/': typeof AppIndexRoute
+  '/_app/projects/$project/anime': typeof AppProjectsProjectAnimeRoute
   '/_app/projects/$project/assistant': typeof AppProjectsProjectAssistantRoute
   '/_app/projects/$project/episodes': typeof AppProjectsProjectEpisodesRouteWithChildren
   '/_app/projects/$project/ingest': typeof AppProjectsProjectIngestRoute
   '/_app/projects/$project/styles': typeof AppProjectsProjectStylesRoute
-  '/_app/projects/$project/anime': typeof AppProjectsProjectAnimeRoute
   '/_app/projects/$project/tasks': typeof AppProjectsProjectTasksRoute
   '/_app/projects/$project/characters': typeof AppProjectsProjectCharactersLazyRoute
   '/_app/projects/$project/freezone': typeof AppProjectsProjectFreezoneLazyRoute
@@ -307,11 +306,11 @@ export interface FileRouteTypes {
     | '/access-unavailable'
     | '/credits'
     | '/watch/$work'
+    | '/projects/$project/anime'
     | '/projects/$project/assistant'
     | '/projects/$project/episodes'
     | '/projects/$project/ingest'
     | '/projects/$project/styles'
-    | '/projects/$project/anime'
     | '/projects/$project/tasks'
     | '/projects/$project/characters'
     | '/projects/$project/freezone'
@@ -331,11 +330,11 @@ export interface FileRouteTypes {
     | '/credits'
     | '/watch/$work'
     | '/'
+    | '/projects/$project/anime'
     | '/projects/$project/assistant'
     | '/projects/$project/episodes'
     | '/projects/$project/ingest'
     | '/projects/$project/styles'
-    | '/projects/$project/anime'
     | '/projects/$project/tasks'
     | '/projects/$project/characters'
     | '/projects/$project/freezone'
@@ -356,11 +355,11 @@ export interface FileRouteTypes {
     | '/_app/credits'
     | '/watch/$work'
     | '/_app/'
+    | '/_app/projects/$project/anime'
     | '/_app/projects/$project/assistant'
     | '/_app/projects/$project/episodes'
     | '/_app/projects/$project/ingest'
     | '/_app/projects/$project/styles'
-    | '/_app/projects/$project/anime'
     | '/_app/projects/$project/tasks'
     | '/_app/projects/$project/characters'
     | '/_app/projects/$project/freezone'
@@ -460,13 +459,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppProjectsProjectStylesRouteImport
       parentRoute: typeof AppRoute
     }
-    '/_app/projects/$project/anime': {
-      id: '/_app/projects/$project/anime'
-      path: '/projects/$project/anime'
-      fullPath: '/projects/$project/anime'
-      preLoaderRoute: typeof AppProjectsProjectAnimeRouteImport
-      parentRoute: typeof AppRoute
-    }
     '/_app/projects/$project/ingest': {
       id: '/_app/projects/$project/ingest'
       path: '/projects/$project/ingest'
@@ -486,6 +478,13 @@ declare module '@tanstack/react-router' {
       path: '/projects/$project/assistant'
       fullPath: '/projects/$project/assistant'
       preLoaderRoute: typeof AppProjectsProjectAssistantRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/projects/$project/anime': {
+      id: '/_app/projects/$project/anime'
+      path: '/projects/$project/anime'
+      fullPath: '/projects/$project/anime'
+      preLoaderRoute: typeof AppProjectsProjectAnimeRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/projects/$project/episodes/$episode/': {
@@ -587,11 +586,11 @@ interface AppRouteChildren {
   AppAccessUnavailableRoute: typeof AppAccessUnavailableRoute
   AppCreditsRoute: typeof AppCreditsRoute
   AppIndexRoute: typeof AppIndexRoute
+  AppProjectsProjectAnimeRoute: typeof AppProjectsProjectAnimeRoute
   AppProjectsProjectAssistantRoute: typeof AppProjectsProjectAssistantRoute
   AppProjectsProjectEpisodesRoute: typeof AppProjectsProjectEpisodesRouteWithChildren
   AppProjectsProjectIngestRoute: typeof AppProjectsProjectIngestRoute
   AppProjectsProjectStylesRoute: typeof AppProjectsProjectStylesRoute
-  AppProjectsProjectAnimeRoute: typeof AppProjectsProjectAnimeRoute
   AppProjectsProjectTasksRoute: typeof AppProjectsProjectTasksRoute
   AppProjectsProjectCharactersLazyRoute: typeof AppProjectsProjectCharactersLazyRoute
   AppProjectsProjectFreezoneLazyRoute: typeof AppProjectsProjectFreezoneLazyRoute
@@ -601,11 +600,11 @@ const AppRouteChildren: AppRouteChildren = {
   AppAccessUnavailableRoute: AppAccessUnavailableRoute,
   AppCreditsRoute: AppCreditsRoute,
   AppIndexRoute: AppIndexRoute,
+  AppProjectsProjectAnimeRoute: AppProjectsProjectAnimeRoute,
   AppProjectsProjectAssistantRoute: AppProjectsProjectAssistantRoute,
   AppProjectsProjectEpisodesRoute: AppProjectsProjectEpisodesRouteWithChildren,
   AppProjectsProjectIngestRoute: AppProjectsProjectIngestRoute,
   AppProjectsProjectStylesRoute: AppProjectsProjectStylesRoute,
-  AppProjectsProjectAnimeRoute: AppProjectsProjectAnimeRoute,
   AppProjectsProjectTasksRoute: AppProjectsProjectTasksRoute,
   AppProjectsProjectCharactersLazyRoute: AppProjectsProjectCharactersLazyRoute,
   AppProjectsProjectFreezoneLazyRoute: AppProjectsProjectFreezoneLazyRoute,

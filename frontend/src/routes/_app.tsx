@@ -25,6 +25,7 @@ import { initRegionTabSync } from "@/lib/region-tab-sync";
 import { initObservability } from "@/lib/observability";
 import { TaskCenterProvider } from "@/task-center/provider";
 import { TaskStatusBar } from "@/components/task-center/status-bar";
+import { MusicPlayer } from "@/components/music-player/music-player";
 import { TaskPanel } from "@/components/task-center/panel";
 import { MyBuddyCompanion } from "@/features/companion/MyBuddyCompanion";
 import { AccessoryUnlockPrompt } from "@/features/rewards/AccessoryUnlockPrompt";
@@ -266,6 +267,7 @@ function AppLayout() {
               </main>
             </div>
             <TaskPanel />
+            <MusicPlayer />
             <TaskStatusBar onOpenPikoStation={() => setPikoStationOpen(true)} />
           </div>
         </div>

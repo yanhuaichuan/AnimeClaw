@@ -12,7 +12,7 @@ class VisibleSurfaceAccess:
         return [
             {
                 "surface_code": "freezone",
-                "label": "虾画",
+                "label": "漫画",
                 "available": False,
                 "unavailable_message": "入口维护中",
             }
@@ -36,7 +36,7 @@ async def test_surface_route_returns_visibility_without_enforcing_access(
             "items": [
                 {
                     "surface_code": "freezone",
-                    "label": "虾画",
+                    "label": "漫画",
                     "available": False,
                     "unavailable_message": "入口维护中",
                 }

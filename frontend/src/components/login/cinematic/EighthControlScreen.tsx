@@ -58,7 +58,7 @@ export function EighthControlScreen({
         <p>CONTROL 08</p>
         <h2>只为创作完整的作品企划</h2>
         <span>
-          DramaClaw 关注的是一部剧如何持续生产：文本入项，角色一致性，场景复用，镜头推进，团队协作交付。
+          AnimeClaw 关注的是一部剧如何持续生产：文本入项，角色一致性，场景复用，镜头推进，团队协作交付。
         </span>
       </div>
 
@@ -66,7 +66,7 @@ export function EighthControlScreen({
         <span />
       </div>
 
-      <div className={styles.console} aria-label="DramaClaw direction control">
+      <div className={styles.console} aria-label="AnimeClaw direction control">
         <div className={styles.consoleHeader}>
           <span>ACTIVE NODE</span>
           <strong>SCENE DIRECTION</strong>

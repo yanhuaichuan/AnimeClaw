@@ -43,7 +43,7 @@ except ValueError:
     TURN_TOOL_CALL_LIMIT = 20
 TOOL_DETAIL_LIMIT = 1600
 CONTENT_FILTER_MESSAGE = (
-    "本轮回复被模型网关的内容安全过滤拦截了，虾导没有拿到可用输出。"
+    "本轮回复被模型网关的内容安全过滤拦截了，漫导没有拿到可用输出。"
     "请把需求拆得更具体，避免一次性要求完成整集或包含敏感/违规描述；"
     "也可以先让我只列当前制作进度和下一步。"
 )
@@ -52,7 +52,7 @@ DRAMACLAW_ONE_STEP_STOP_MESSAGE = (
 )
 DRAMACLAW_WRITE_FAILED_STOP_MESSAGE = (
     "刚才这一步没有成功启动任务。请先根据返回的错误补齐前置条件；"
-    "如果是配音缺少声线，可以到「虾塘」上传或录制缺失声线后再继续。"
+    "如果是配音缺少声线，可以到「漫塘」上传或录制缺失声线后再继续。"
 )
 
 _DRAMACLAW_WRITE_TOOLS = {
@@ -573,7 +573,7 @@ class HermesSdkThread:
                                 thread_id=self.id,
                                 turn_id=turn_id,
                                 text=(
-                                    "本轮操作已停止：虾导连续调用工具过多，可能在自动推进过大范围。"
+                                    "本轮操作已停止：漫导连续调用工具过多，可能在自动推进过大范围。"
                                     "请缩小指令范围，例如只检查前置条件，或只启动一个具体 beat 的视频任务。"
                                 ),
                             )

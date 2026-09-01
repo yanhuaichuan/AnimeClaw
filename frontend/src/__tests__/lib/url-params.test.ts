@@ -114,7 +114,7 @@ describe("freezone url params — routes through tanstack when a router is regis
     // Real leave transition: tanstack throttles history onto a microtask, so
     // the router's location is already /characters while window.location still
     // reads the old /freezone. A stray canvas-sync write here must NOT navigate
-    // back to freezone — that was the regression that trapped users on 虾画.
+    // back to freezone — that was the regression that trapped users on 漫画.
     window.history.pushState(null, "", "/projects/proj-a/freezone");
     const navigate = mockRouter("/projects/proj-a/characters");
 

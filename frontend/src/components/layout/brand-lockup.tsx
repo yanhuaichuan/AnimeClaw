@@ -33,7 +33,11 @@ export function BrandLockup({ value }: {
   return (
     <span className="flex min-w-0 shrink-0 items-center">
       <span className="animeclaw-wordmark" aria-hidden="true">
-        <span className="animeclaw-wordmark__mark">AC</span>
+        <img
+          className="animeclaw-wordmark__mark-img"
+          src="/brand/animeclaw-mark.svg"
+          alt=""
+        />
         <span className="animeclaw-wordmark__name">AnimeClaw</span>
       </span>
       {organizationBrand ? (

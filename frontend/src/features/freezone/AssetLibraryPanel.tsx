@@ -538,8 +538,8 @@ export function AssetLibraryPanel({
   ];
 
   const [panelTab, setPanelTab] = useState<PanelTab>("canvases");
-  // 后台可以按用户组关掉「虾集(主线)」;关掉后左侧的「主线资产」tab 也要一起隐藏
-  //(「项目画布」保留),否则顶部导航没了虾集、这里却还能翻出主线的资产。
+  // 后台可以按用户组关掉「漫集(主线)」;关掉后左侧的「主线资产」tab 也要一起隐藏
+  //(「项目画布」保留),否则顶部导航没了漫集、这里却还能翻出主线的资产。
   // 加载中先按可用处理,与顶部导航一致。
   const productSurfaces = useProductSurfaces();
   const mainlineAvailable =

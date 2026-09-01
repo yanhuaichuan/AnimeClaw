@@ -36,7 +36,7 @@ function projectionKeyFromEdge(edge: CanvasEdge): string | null {
  * safeKey 只是给人看的可读部分，是**有损**的：中文角色名会被整段换成 `_` 再 strip
  * 掉，`asset:character:林小满` 和 `asset:character:顾南城` 都会塌成 `asset_character`。
  * 后端对两个角色又产出同名的原始节点 id（`character_profile` 等），前缀一撞，第二个
- * 人物进虾画时就会顶掉第一个人物的组——组名被换、两个人物的节点挤进同一个组。
+ * 人物进漫画时就会顶掉第一个人物的组——组名被换、两个人物的节点挤进同一个组。
  * 唯一性一律交给 key 的稳定摘要来保证。
  */
 function projectionIdPrefix(projectionKey: string): string {

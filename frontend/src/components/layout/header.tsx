@@ -104,7 +104,7 @@ export function Header({ ambientBackground = false }: { ambientBackground?: bool
   const homeLinkLabel = brandName
     ? `${t("app.logoHomeTooltip")} — ${brandName}`
     : t("app.logoHomeTooltip");
-  const displayName = username ?? "User";
+  const displayName = username ?? t("auth.usernamePlaceholder");
   const avatarInitial = displayName.slice(0, 1).toUpperCase();
   const activeLanguage = (i18n.resolvedLanguage ?? i18n.language).startsWith("zh")
     ? "zh"

@@ -168,7 +168,7 @@ export function ProjectSwitcher({ current }: { current: string }) {
 }
 
 /**
- * 「虾集」子页菜单，作为 header 的第二行渲染 —— 它必须在文档流里占真实高度，
+ * 「漫集」子页菜单，作为 header 的第二行渲染 —— 它必须在文档流里占真实高度，
  * 而不是浮在内容之上：内容区是独立滚动容器，任何浮层都会被滚上来的内容穿过。
  */
 export function ProjectXiajiMenu({ project }: { project: string }) {
@@ -199,7 +199,7 @@ export function ProjectXiajiMenu({ project }: { project: string }) {
               ? normalizeLastEpisodeLocation(project, rememberedEpisodeLocation) ?? item.to
               : item.to;
           // 高亮按栏目自身的路由判断：target 可能是带 ?query 的剧集深链，
-          // 拿它比 pathname 永远不相等（虾镜里就不会高亮）。
+          // 拿它比 pathname 永远不相等（漫镜里就不会高亮）。
           const sectionPath = item.to.replace("$project", encodeURIComponent(project));
           const active = pathname === sectionPath || pathname.startsWith(`${sectionPath}/`);
           return (
@@ -246,7 +246,7 @@ export function ProjectHeaderNavigation({ project }: { project: string }) {
   const freezoneAvailable =
     surfaceAccess(productSurfaces.data, "freezone")?.available ?? productSurfaces.isPending;
 
-  // 记住当前停留的区块（虾画 / 虾集子页），进项目和切「虾集」时按此恢复。
+  // 记住当前停留的区块（漫画 / 漫集子页），进项目和切「漫集」时按此恢复。
   useEffect(() => {
     const section = projectSectionFromPath(pathname);
     if (isRememberedSection(section)) {
@@ -274,7 +274,7 @@ export function ProjectHeaderNavigation({ project }: { project: string }) {
       navigate({ to: PROJECT_SECTION_ROUTES.freezone, params: { project } });
       return;
     }
-    // 切「虾集」时回到上次停留的子页（默认虾料）；上次在虾镜且有剧集深链则直达。
+    // 切「漫集」时回到上次停留的子页（默认漫料）；上次在漫镜且有剧集深链则直达。
     let target: string = lastXiajiSection
       ? PROJECT_SECTION_ROUTES[lastXiajiSection]
       : XIAJI_DEFAULT_ROUTE;

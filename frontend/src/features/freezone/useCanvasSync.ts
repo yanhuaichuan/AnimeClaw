@@ -70,7 +70,7 @@ const DRAFT_DEBOUNCE_MS = 300;
 const LOCK_BUSY_MAX_RETRIES = 1;
 export const FREEZONE_HYDRATE_RELEASE_GRACE_MS = 50;
 /**
- * 已结算的 hydrate 结果保留多久可复用。顶栏在「虾画 / 虾集」之间来回切时会整体
+ * 已结算的 hydrate 结果保留多久可复用。顶栏在「漫画 / 漫集」之间来回切时会整体
  * 卸载再挂载画布，复用能省掉一趟往返的全量拉取。仅在期间没有任何本地编辑
  * （userEditsSinceHydrate === 0）时复用。
  *
@@ -84,7 +84,7 @@ export const FREEZONE_HYDRATE_SETTLED_REUSE_MS = 10_000;
  * store 里当前装着哪张画布的内容。跨组件挂载保留（FreezoneShell 没有 key，切画布
  * 是同一个实例重跑 effect），用来区分两种情况：
  *   - 换画布：旧内容必须在发请求之前就卸掉，否则卸载与挂载会并进同一次提交；
- *   - 同一张画布重进（顶栏虾画/虾集来回切）：store 里就是要的内容，清空只会白闪。
+ *   - 同一张画布重进（顶栏漫画/漫集来回切）：store 里就是要的内容，清空只会白闪。
  */
 let storeCanvasKey: string | null = null;
 
@@ -1109,7 +1109,7 @@ export function useCanvasSync(
     // 350 节点一次冻 ~1.4s。提前清空把它拆成两次：本次提交只卸载（随后画面是
     // FreezoneShell 的全屏 loading），等请求回来再单独挂载。
     //
-    // 只在确实换了画布时清：同一张画布重进（顶栏虾画/虾集来回切）store 里就是要
+    // 只在确实换了画布时清：同一张画布重进（顶栏漫画/漫集来回切）store 里就是要
     // 的内容，清掉只会白闪一下。写盘与自动保存全部被 switchingRef 挡住（见
     // decideSaveAction 的 switching 分支），空 store 不会外泄成一次覆盖保存。
     if (

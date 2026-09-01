@@ -435,8 +435,8 @@ export function FreezoneShell({ project, canvasId }: FreezoneShellProps) {
   // there is no UI bound to a syncing/removing value, so no state is kept.
   const syncingProjectionRef = useRef<string | null>(null);
   const removingProjectionRef = useRef<string | null>(null);
-  // 顶栏在「虾画 / 虾集」之间切换会整体卸载再挂载本组件，但画布数据留在全局 store 里。
-  // 如果这里从 false 起步，回到虾画就会先把画面换成「正在加载画布…」，等 hydrate 回来
+  // 顶栏在「漫画 / 漫集」之间切换会整体卸载再挂载本组件，但画布数据留在全局 store 里。
+  // 如果这里从 false 起步，回到漫画就会先把画面换成「正在加载画布…」，等 hydrate 回来
   // 才重新画出来 —— 看着就是卡。同一个画布重进时直接渲染 store 里的既有内容，
   // hydrate 期间只叠一层轻量 overlay。
   //
@@ -1141,7 +1141,7 @@ function FreezoneChatDock({
 }
 
 /**
- * 虾导入口的位置（相对容器右下角的 right/bottom 偏移，px）。
+ * 漫导入口的位置（相对容器右下角的 right/bottom 偏移，px）。
  * 注意 key 不用 `supertale-` 前缀——那个前缀会被 reset-region-state 的
  * localStorage 清扫误删；这只是个 UI 位置偏好，跨区域保留没问题。
  */

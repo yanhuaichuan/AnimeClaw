@@ -202,12 +202,12 @@ export function DownloadPage() {
     <div className={styles.page} ref={pageRef}>
       <header className={styles.top}>
         <div className={styles.topInner}>
-          <a className={styles.brand} href="#top" aria-label="DramaClaw">
-            <img className={styles.brandMark} src="/brand/logo-d.png" alt="" aria-hidden="true" />
+          <a className={styles.brand} href="#top" aria-label="AnimeClaw">
+            <img className={styles.brandMark} src="/brand/animeclaw-mark.svg" alt="" aria-hidden="true" />
             <img
               className={styles.brandWordmark}
-              src="/brand/dramaclaw-wordmark.png"
-              alt="DramaClaw"
+              src="/brand/animeclaw-wordmark.svg"
+              alt="AnimeClaw"
             />
           </a>
           <nav className={styles.topNav}>
@@ -229,8 +229,8 @@ export function DownloadPage() {
               <img
                 className={clsx(styles.heroWordmark, styles.rise)}
                 data-reveal=""
-                src="/brand/dramaclaw-wordmark.png"
-                alt="DramaClaw"
+                src="/brand/animeclaw-wordmark.png"
+                alt="AnimeClaw 漫剧工厂"
               />
 
               {/* slogan 与登录页共用同一批 auth.stage.* 键,两处永远同步。 */}
@@ -451,8 +451,8 @@ export function DownloadPage() {
           <div className={styles.footerRow}>
             <img
               className={styles.footerWordmark}
-              src="/brand/dramaclaw-wordmark.png"
-              alt="DramaClaw"
+              src="/brand/animeclaw-wordmark.svg"
+              alt="AnimeClaw"
             />
             <nav className={styles.footerLinks}>
               <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">

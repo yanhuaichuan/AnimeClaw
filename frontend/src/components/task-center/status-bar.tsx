@@ -2,6 +2,7 @@
 // Copyright (c) 2026 ClaymoreLab
 import { useMemo, type KeyboardEvent } from "react";
 import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import { ChevronUp, Zap, Circle } from "lucide-react";
 import {
   useTaskCenterStore,
@@ -24,14 +25,14 @@ const HEALTH_COLOR: Record<StreamHealth, string> = {
   failed: "text-destructive",
 };
 
-function relativeLabel(iso: string, now: number = Date.now()): string {
+function relativeLabel(iso: string, t: TFunction, now: number = Date.now()): string {
   const ms = now - Date.parse(iso);
   const s = Math.floor(ms / 1000);
-  if (s < 60) return "just now";
+  if (s < 60) return t("taskCenter.relative.justNow");
   const m = Math.floor(s / 60);
-  if (m < 60) return `${m}m ago`;
+  if (m < 60) return t("taskCenter.relative.minutesAgo", { count: m });
   const h = Math.floor(m / 60);
-  return `${h}h ago`;
+  return t("taskCenter.relative.hoursAgo", { count: h });
 }
 
 function taskProgress(task: TaskState | null | undefined): number {
@@ -140,7 +141,7 @@ export function TaskStatusBar({ onOpenPikoStation }: TaskStatusBarProps) {
             {lastDone.status === "failed" ? "✗" : "✓"}{" "}
             <span className="truncate">{displayLabel(lastDone, t)}</span>
             <span className="shrink-0 text-muted-foreground/70">
-              · {relativeLabel(lastDone.completed_at)}
+              · {relativeLabel(lastDone.completed_at, t)}
             </span>
           </span>
         ) : (

@@ -73,8 +73,8 @@
       "eyebrow": "Interface",
       "title": "A guided pipeline and a free-form canvas",
       "lede": "The mainline breaks a novel into episodes, characters, storyboards, first frames, video, and the final cut, one page per step. The canvas projects any of those shots onto a node graph where you can rework them freely and sync the result back. Both sides read from the same assets.",
-      "windowTitle": "DramaClaw — Episode 03 · Canvas",
-      "alt": "Sketch of the DramaClaw desktop canvas: episode tabs across the top, shot outline on the left, node canvas in the middle, parameter panel on the right.",
+      "windowTitle": "AnimeClaw — Episode 03 · Canvas",
+      "alt": "Sketch of the AnimeClaw desktop canvas: episode tabs across the top, shot outline on the left, node canvas in the middle, parameter panel on the right.",
       "caption": "Illustration (canvas view)"
     },
     "capability": {
@@ -140,7 +140,7 @@
       },
       "v120": {
         "title": "Transparent feature credits, external agents welcome",
-        "description": "Feature prices, estimated charges, and usage history live in one place, and local agents such as Claude Code can drive DramaClaw CE over MCP."
+        "description": "Feature prices, estimated charges, and usage history live in one place, and local agents such as Claude Code can drive AnimeClaw CE over MCP."
       }
     },
     "faq": {
@@ -149,7 +149,7 @@
       "items": {
         "macGatekeeper": {
           "question": "macOS says the developer cannot be verified. Now what?",
-          "answer": "Find DramaClaw in Finder → Applications, Control-click the icon, choose Open, then confirm with Open in the dialog. You only do this once; after that it launches normally."
+          "answer": "Find AnimeClaw in Finder → Applications, Control-click the icon, choose Open, then confirm with Open in the dialog. You only do this once; after that it launches normally."
         },
         "winSmartScreen": {
           "question": "Windows says it protected my PC. Now what?",
@@ -465,21 +465,21 @@
       "lineLabel": "Line {{line}}",
       "noIssues": "No specific issues found"
     },
-    "title": "Xia Director",
-    "upgrading": "Xia Director is being upgraded. Stay tuned!",
-    "description": "Open Xia Director beside the current creation page.",
-    "toggle": "Expand or collapse Xia Director",
-    "close": "Collapse Xia Director",
+    "title": "Manga Director",
+    "upgrading": "Manga Director is being upgraded. Stay tuned!",
+    "description": "Open Manga Director beside the current creation page.",
+    "toggle": "Expand or collapse Manga Director",
+    "close": "Collapse Manga Director",
     "resize": "Drag to resize chat",
     "openExternal": "Open in new window",
-    "iframeTitle": "Xia Director",
+    "iframeTitle": "Manga Director",
     "newChat": "New chat",
     "expandSessions": "Expand sessions",
     "collapseSessions": "Collapse sessions",
     "sessionActions": "Session actions",
     "deleteSessionConfirm": "Delete this conversation?",
     "noSessions": "No sessions yet",
-    "chatTitle": "Xia Director",
+    "chatTitle": "Manga Director",
     "globalScope": "Global",
     "connected": "Connected",
     "connecting": "Connecting",
@@ -489,11 +489,11 @@
     "emptyTitle": "Start a conversation",
     "emptyDescription": "Ask about project progress, failed tasks, or have the assistant organize your creative plan.",
     "syncingHistoryTitle": "Initializing conversation",
-    "syncingHistoryDescription": "Connecting to Xia Director and syncing chat history. Please wait.",
-    "disclaimer": "Xia Director can make mistakes. Check key story, character, and asset details.",
-    "placeholder": "After uploading a script, ask Xia Director to advance episodes, visuals, audio, or final video",
+    "syncingHistoryDescription": "Connecting to Manga Director and syncing chat history. Please wait.",
+    "disclaimer": "Manga Director can make mistakes. Check key story, character, and asset details.",
+    "placeholder": "After uploading a script, ask Manga Director to advance episodes, visuals, audio, or final video",
     "waiting": "Waiting for chat service...",
-    "waitingResponse": "Waiting for Xia Director",
+    "waitingResponse": "Waiting for Manga Director",
     "waitingResponses": [
       "Understanding what you want to move forward",
       "Reviewing the current conversation context",
@@ -568,7 +568,7 @@
     "ingestAutomationUploading": "Uploading novel: {{filename}}",
     "ingestAutomationStarted": "Started novel ingest: {{filename}}",
     "ingestAutomationFailed": "Novel upload or ingest failed: {{message}}",
-    "ingestAutomationNoProject": "Open a project before uploading a novel through Xia Director.",
+    "ingestAutomationNoProject": "Open a project before uploading a novel through Manga Director.",
     "ingestAutomationMissingFile": "Could not read the uploaded novel file. Select it again.",
     "attachmentOnlyPrompt": "Please analyze the file I uploaded.",
     "attachmentAnalysisUploading": "Uploading file for analysis: {{filename}}",
@@ -576,11 +576,11 @@
   },
   "freezone": {
     "chat": {
-      "title": "Xia Director",
-      "description": "Open Xia Director beside the Freezone canvas.",
-      "toggle": "Open Freezone Xia Director",
-      "close": "Collapse Freezone Xia Director",
-      "resize": "Drag to resize Freezone Xia Director"
+      "title": "Manga Director",
+      "description": "Open Manga Director beside the Manga Canvas canvas.",
+      "toggle": "Open Manga Canvas Manga Director",
+      "close": "Collapse Manga Canvas Manga Director",
+      "resize": "Drag to resize Manga Canvas Manga Director"
     },
     "canvases": {
       "defaultSection": "Default canvas",
@@ -702,9 +702,44 @@
   },
   "theme": {
     "toggle": "Toggle theme",
-    "light": "Light",
+    "light": "White",
     "dark": "Dark",
     "system": "System"
+  },
+  "musicPlayer": {
+    "title": "Playlist player",
+    "open": "Open music player",
+    "close": "Collapse player",
+    "minimize": "Minimize to a button",
+    "restore": "Expand player",
+    "expand": "Expand playlist",
+    "collapse": "Collapse playlist",
+    "play": "Play",
+    "pause": "Pause",
+    "prev": "Previous",
+    "next": "Next",
+    "empty": "No tracks yet. Add local audio or import a playlist.",
+    "addFiles": "Add local audio",
+    "addUrl": "Add audio URL",
+    "urlPlaceholder": "https://… direct mp3 / m4a / ogg",
+    "importPlaylist": "Import playlist",
+    "loadDemo": "Reload ambient playlist",
+    "clear": "Clear playlist",
+    "remove": "Remove",
+    "volume": "Volume",
+    "nowPlaying": "Now playing",
+    "playlist": "Playlist",
+    "untitled": "Untitled track",
+    "unknownArtist": "Unknown",
+    "demoLoaded": "Loaded the ambient playlist (Kevin MacLeod, CC BY)",
+    "importSuccess": "Imported {{count}} tracks",
+    "importEmpty": "No playable audio URLs in this file",
+    "importFailed": "Could not parse the playlist file",
+    "urlInvalid": "Enter a playable http(s) audio URL",
+    "added": "Added to playlist",
+    "filesAdded": "Added {{count}} local files (re-add after refresh)",
+    "helpTitle": "Where to find playlists",
+    "helpBody": "Plays local mp3/m4a/ogg, direct audio URLs, and M3U / JSON playlists. Licensed platforms (NetEase, QQ Music, Spotify) cannot be streamed here — download then import. Free playlists: Jamendo, Free Music Archive, Internet Archive Netlabels, Pixabay Music."
   },
   "rewards": {
     "accessoryUnlock": {
@@ -786,8 +821,8 @@
     },
     "domain": {
       "mainline": "Mainline",
-      "freezone": "Freezone",
-      "all": "Mainline & Freezone"
+      "freezone": "Manga Canvas",
+      "all": "Mainline & Manga Canvas"
     },
     "columns": {
       "time": "Time",
@@ -824,8 +859,8 @@
     "styles": "Visual Style",
     "tasks": "Task Center",
     "taskCenter": "Task Center",
-    "aiAssistant": "Xia Director",
-    "freezone": "Freezone",
+    "aiAssistant": "Manga Director",
+    "freezone": "Manga Canvas",
     "anime": "Anime Studio"
   },
   "anime": {
@@ -841,13 +876,34 @@
       "qa": "QA"
     },
     "panels": {
-      "studio": { "title": "Anime Studio", "subtitle": "Same character, ten shots, continuity before spend." },
-      "episodes": { "title": "Shot Editor", "subtitle": "Change acting, camera, and pose without unlocking the face." },
-      "world": { "title": "Story World", "subtitle": "Era, rules, and factions that every episode inherits." },
-      "characters": { "title": "Character Bible", "subtitle": "White hair, red eyes, black dress, red cord — still true in episode 37." },
-      "styles": { "title": "Style Lock", "subtitle": "Line, color, light, and face locked from episode 1 to 100." },
-      "story": { "title": "Story Memory", "subtitle": "Hooks, cliffhangers, and open threads." },
-      "qa": { "title": "Anime QA", "subtitle": "Story / character / picture / voice / continuity." }
+      "studio": {
+        "title": "Anime Studio",
+        "subtitle": "Same character, ten shots, continuity before spend."
+      },
+      "episodes": {
+        "title": "Shot Editor",
+        "subtitle": "Change acting, camera, and pose without unlocking the face."
+      },
+      "world": {
+        "title": "Story World",
+        "subtitle": "Era, rules, and factions that every episode inherits."
+      },
+      "characters": {
+        "title": "Character Bible",
+        "subtitle": "White hair, red eyes, black dress, red cord — still true in episode 37."
+      },
+      "styles": {
+        "title": "Style Lock",
+        "subtitle": "Line, color, light, and face locked from episode 1 to 100."
+      },
+      "story": {
+        "title": "Story Memory",
+        "subtitle": "Hooks, cliffhangers, and open threads."
+      },
+      "qa": {
+        "title": "Anime QA",
+        "subtitle": "Story / character / picture / voice / continuity."
+      }
     },
     "inspector": {
       "character": "Cast",
@@ -913,7 +969,9 @@
       "body": "This is the AnimeClaw bar: face, hair, dress, red cord, earrings stay put. Seed the Su Li demo below.",
       "cta": "Seed 10-shot demo"
     },
-    "characters": { "empty": "No Character Bible yet. Run the demo or confirm the cast first." },
+    "characters": {
+      "empty": "No Character Bible yet. Run the demo or confirm the cast first."
+    },
     "qa": {
       "empty": "No scorecard yet. Generate shots, then check.",
       "story": "Story",
@@ -1186,14 +1244,14 @@
       "projectQueueFull": "The current project's {{queue}} queue is full"
     },
     "freezone": {
-      "openCharacter": "Freezone",
-      "openCharacterTip": "Edit this character asset in Freezone",
-      "openPortrait": "Portrait Freezone",
-      "openPortraitTip": "Edit this character portrait asset in Freezone",
-      "openIdentity": "Identity Freezone",
-      "openIdentityTip": "Edit this identity image asset in Freezone",
-      "opened": "Freezone opened",
-      "openFailed": "Failed to open Freezone"
+      "openCharacter": "Manga Canvas",
+      "openCharacterTip": "Edit this character asset in Manga Canvas",
+      "openPortrait": "Portrait Manga Canvas",
+      "openPortraitTip": "Edit this character portrait asset in Manga Canvas",
+      "openIdentity": "Identity Manga Canvas",
+      "openIdentityTip": "Edit this identity image asset in Manga Canvas",
+      "opened": "Manga Canvas opened",
+      "openFailed": "Failed to open Manga Canvas"
     },
     "confirm": {
       "delete": "Delete character \"{{name}}\"? This cannot be undone.",
@@ -1259,7 +1317,7 @@
       "subtitle": "Continue your stories, assets, and shots",
       "noAccount": "Need an account?",
       "applyAccount": "Request access",
-      "showcaseLabel": "DramaClaw showcase",
+      "showcaseLabel": "AnimeClaw showcase",
       "showcaseEyebrow": "MADE WITH DRAMACLAW",
       "showcaseMeta": "Production in motion",
       "showcaseTitle": "Imagination, rolling at full speed",
@@ -1289,10 +1347,10 @@
         "storyWorld": "Build Your Story World"
       },
       "headlinePrefix": "Make Your Own",
-      "headlineBrand": "DC",
+      "headlineBrand": "AC",
       "headlineSuffix": "Universe",
       "subtitlePrefix": "Make Your Own",
-      "subtitleBrand": "DC",
+      "subtitleBrand": "AC",
       "subtitleSuffix": "",
       "start": "Inspiration happens",
       "sub": "WHERE EVERY SPARK OF INSPIRATION MEETS THE POWER OF EFFORTLESS AI CREATION",
@@ -1301,7 +1359,7 @@
     },
     "community": {
       "label": "Community works",
-      "heading": "DramaClaw TV",
+      "heading": "AnimeClaw TV",
       "likes": "{{count}} likes",
       "openWork": "Open work \"{{title}}\"",
       "works": {
@@ -1371,7 +1429,7 @@
     "namePlaceholder": "Enter your project name",
     "clearName": "Clear project name",
     "nameNoChinese": "Project name cannot contain Chinese characters.",
-    "nameInvalid": "Project name can only contain letters, numbers, and underscores.",
+    "nameInvalid": "Project name can only contain Chinese characters, letters, numbers, and underscores.",
     "nameExistsActive": "A project with this name already exists. Choose another name.",
     "nameExistsArchived": "An archived project already uses this name. Unarchive it or choose another name.",
     "nameExistsDeleted": "A project with this name is in Trash. Restore or permanently delete it before creating a new one.",
@@ -1441,7 +1499,7 @@
     "noActiveDescription": "Create a new project, or check the Archived and Trash tabs for your other projects.",
     "actions": {
       "open": "Open",
-      "openFreezone": "Open in Freezone",
+      "openFreezone": "Open in Manga Canvas",
       "share": "Share",
       "archive": "Archive…",
       "unarchive": "Unarchive",
@@ -1604,10 +1662,16 @@
       "panoCaptureDescription": "Choose a scene 360 view and export a screenshot.",
       "downloadScreenshot": "Download screenshot",
       "panoScreenshotDownloaded": "360 screenshot downloaded",
-      "openFreezone": "Freezone",
-      "openFreezoneTip": "Edit this scene in Freezone",
-      "freezoneOpened": "Scene Freezone opened",
-      "freezoneOpenFailed": "Failed to open Scene Freezone",
+      "masterUploaded": "Scene master uploaded",
+      "panoUploaded": "360 uploaded",
+      "customPackageUploaded": "Custom scene package uploaded",
+      "masterDeleted": "Scene master deleted",
+      "panoDeleted": "360 deleted",
+      "customPackageDeleted": "Custom scene package deleted",
+      "openFreezone": "Manga Canvas",
+      "openFreezoneTip": "Edit this scene in Manga Canvas",
+      "freezoneOpened": "Scene Manga Canvas opened",
+      "freezoneOpenFailed": "Failed to open Scene Manga Canvas",
       "noMaster": "master.png missing",
       "noReverse": "reverse_master.png missing",
       "noPano": "pano_360.png missing",
@@ -1674,10 +1738,10 @@
       "uploadReference": "Upload prop",
       "uploadingReference": "Uploading...",
       "uploadReferenceSuccess": "Prop reference uploaded",
-      "openFreezone": "Freezone",
-      "openFreezoneTip": "Edit this prop asset in Freezone",
-      "freezoneOpened": "Prop Freezone opened",
-      "freezoneOpenFailed": "Failed to open Prop Freezone",
+      "openFreezone": "Manga Canvas",
+      "openFreezoneTip": "Edit this prop asset in Manga Canvas",
+      "freezoneOpened": "Prop Manga Canvas opened",
+      "freezoneOpenFailed": "Failed to open Prop Manga Canvas",
       "owner": "Owner",
       "types": {
         "weapon": "Weapon",
@@ -1861,7 +1925,7 @@
     "novelFormat": {
       "button": "Premium drama format guide",
       "title": "Premium drama format",
-      "intro": "Premium drama scripts need explicit episode and scene boundaries. DramaClaw splits the script by scene headers before generating visuals, dialogue, and audio line by line; it does not invent scene breaks for headerless prose.",
+      "intro": "Premium drama scripts need explicit episode and scene boundaries. AnimeClaw splits the script by scene headers before generating visuals, dialogue, and audio line by line; it does not invent scene breaks for headerless prose.",
       "standardStatus": "Standard · ready to import",
       "standardStatusHint": "Several industry formats are supported. Complete location, time, and INT/EXT metadata can be parsed reliably.",
       "warningStatus": "Repairable · import allowed",
@@ -2053,7 +2117,9 @@
       "closeHint": "Click to collapse"
     },
     "relative": {
-      "justNow": "just now"
+      "justNow": "just now",
+      "minutesAgo": "{{count}}m ago",
+      "hoursAgo": "{{count}}h ago"
     },
     "detail": {
       "currentStatus": "Current status",
@@ -2424,9 +2490,9 @@
       "insertBeforeShort": "Pre",
       "insertAfter": "Insert manual shot after Beat #{{n}}",
       "insertAfterShort": "Post",
-      "openFreezone": "Open XiPaint Beat Workbench",
-      "openFreezoneTip": "Edit in Freezone",
-      "openFreezoneFailed": "Failed to open XiPaint",
+      "openFreezone": "Open Manga Canvas Beat Workbench",
+      "openFreezoneTip": "Edit in Manga Canvas",
+      "openFreezoneFailed": "Failed to open Manga Canvas",
       "markedProps": "Props {{count}}",
       "detectedProps": "Detected props {{count}}"
     },
@@ -2806,10 +2872,10 @@
         "backgroundMissing": "No background image",
         "backgroundCurrent": "Current",
         "backgroundSnapshotUse": "Snapshot use",
-        "openFreezone": "Edit in Freezone",
-        "openFreezoneTip": "Edit this beat sketch in Freezone",
-        "freezoneOpened": "Sketch Freezone opened",
-        "freezoneOpenFailed": "Failed to open Sketch Freezone",
+        "openFreezone": "Edit in Manga Canvas",
+        "openFreezoneTip": "Edit this beat sketch in Manga Canvas",
+        "freezoneOpened": "Sketch Manga Canvas opened",
+        "freezoneOpenFailed": "Failed to open Sketch Manga Canvas",
         "cropTitleWithAspect": "Crop {{aspect}}",
         "cropDragHandle": "Move crop area"
       },
@@ -2848,10 +2914,10 @@
         "versionMismatchDesc": "This render was generated from an older script. Content may be inconsistent. Force use anyway?",
         "regenTitle": "Regenerate render?",
         "regenDesc": "Regenerate render for Beat #{{n}}. New render enters candidate pool.",
-        "openFreezone": "Edit in Freezone",
-        "openFreezoneTip": "Edit this beat render in Freezone",
-        "freezoneOpened": "Freezone editor opened",
-        "freezoneOpenFailed": "Failed to open Freezone editor",
+        "openFreezone": "Edit in Manga Canvas",
+        "openFreezoneTip": "Edit this beat render in Manga Canvas",
+        "freezoneOpened": "Manga Canvas editor opened",
+        "freezoneOpenFailed": "Failed to open Manga Canvas editor",
         "backgroundTitle": "Render background reference",
         "backgroundCurrent": "Current: {{label}}",
         "backgroundHint": "Applies color/material to the sketch without changing composition.",
@@ -3015,10 +3081,10 @@
         "videoPartial": "Video: {{ok}} ok, {{fail}} failed",
         "batchRegenSketchSuccess": "Started sketch regen for {{count}} beats",
         "batchRegenRenderSuccess": "Started render regen for {{count}} beats",
-        "episodeFreezone": "EP Freezone",
-        "episodeFreezoneTooltip": "Open this episode in Freezone",
-        "episodeFreezoneOpened": "EP Freezone opened",
-        "episodeFreezoneOpenFailed": "Failed to open EP Freezone"
+        "episodeFreezone": "EP Manga Canvas",
+        "episodeFreezoneTooltip": "Open this episode in Manga Canvas",
+        "episodeFreezoneOpened": "EP Manga Canvas opened",
+        "episodeFreezoneOpenFailed": "Failed to open EP Manga Canvas"
       },
       "verify": {
         "notRun": "Not run",
@@ -4411,7 +4477,16 @@
     "secretSavedPlaceholder": "Saved · {{preview}} (enter a new value to replace)",
     "pages": {
       "models": "Models & Channels",
-      "storage": "Media Storage"
+      "storage": "Media Storage",
+      "appearance": "Appearance"
+    },
+    "appearancePage": {
+      "title": "Appearance",
+      "description": "Switch between white, dark, or follow the system. Applies across the studio immediately.",
+      "current": "Current theme",
+      "lightHint": "Clean white surfaces. Sakura accent stays on buttons so light and dark share the same components.",
+      "darkHint": "Ink-and-sakura dark studio for shots and canvas.",
+      "systemHint": "Follow the computer light / dark appearance."
     },
     "modelConfig": {
       "title": "Model Config",
@@ -4464,7 +4539,7 @@
         "mediaCatalogCheckFailed": "Could not check the official media model catalog. Try again later."
       },
       "custom": {
-        "description": "CE uses a local SQLite-backed NewAPI. DramaClaw connects the database, creates a runtime token, and enables the local channel automatically.",
+        "description": "CE uses a local SQLite-backed NewAPI. AnimeClaw connects the database, creates a runtime token, and enables the local channel automatically.",
         "init": "Initialize Local NewAPI",
         "repair": "Check & Repair",
         "initialized": "Local NewAPI is ready.",
@@ -4483,7 +4558,7 @@
         "setupConfirmPassword": "Confirm Password",
         "setupPasswordPlaceholder": "At least 8 characters",
         "setupConfirmPasswordPlaceholder": "Enter it again",
-        "setupPasswordOnlyOnce": "This username and password are sent to your NewAPI instance only when creating the first admin on a fresh NewAPI install. If NewAPI is already initialized, entering a password here will not change the existing admin password. DramaClaw does not save the password or use it for later operations; keep it for logging into the NewAPI admin console after first-time setup.",
+        "setupPasswordOnlyOnce": "This username and password are sent to your NewAPI instance only when creating the first admin on a fresh NewAPI install. If NewAPI is already initialized, entering a password here will not change the existing admin password. AnimeClaw does not save the password or use it for later operations; keep it for logging into the NewAPI admin console after first-time setup.",
         "setupRequired": "Local NewAPI has not been initialized yet. Enter the setup password and confirmation, then try again.",
         "setupAlreadyInitializedPasswordIgnored": "Your NewAPI instance is already initialized. This run did not call the NewAPI setup endpoint and did not change the existing admin password; the password you entered was ignored and cleared.",
         "setupPasswordMissingUsername": "Enter the admin username.",
@@ -4615,13 +4690,13 @@
         "multimodalRequiredBadge": "Multimodal required",
         "cogneeDescription": "Novel import and knowledge retrieval require both an understanding model and an embedding model; together they form the Cognee novel knowledge base.",
         "groups": {
-          "xiahua": "XiaHua",
-          "xialiao": "XiaLiao",
-          "xiatan": "XiaTang",
-          "xiajing": "XiaJing",
-          "xiadao": "XiaDao",
-          "xiage": "XiaGe",
-          "novelImport": "XiaLiao · Novel Knowledge Base (Cognee)"
+          "xiahua": "Manga Canvas",
+          "xialiao": "Story Source",
+          "xiatan": "Asset Library",
+          "xiajing": "Episode Studio",
+          "xiadao": "Manga Director",
+          "xiage": "Visual Style",
+          "novelImport": "Story Source · Novel Knowledge Base (Cognee)"
         },
         "features": {
           "HERMES": "AI Director chat model",
@@ -4671,7 +4746,7 @@
       },
       "mediaModels": {
         "title": "Image / Video / Audio Generation Models",
-        "description": "Models come from the current custom local configuration. Add image or video models and configure the capabilities shown in XiaHua.",
+        "description": "Models come from the current custom local configuration. Add image or video models and configure the capabilities shown in Manga Canvas.",
         "addModel": "Add model",
         "addModelTitle": "Add media model",
         "editModelTitle": "Edit media model",
@@ -4682,9 +4757,9 @@
         "displayName": "Display name",
         "mediaType": "Media type",
         "sortOrder": "Sort order",
-        "enabled": "Enable in XiaHua",
+        "enabled": "Enable in Manga Canvas",
         "capabilitiesJson": "Capability config JSON",
-        "commonCapabilities": "XiaHua capabilities",
+        "commonCapabilities": "Manga Canvas capabilities",
         "resolutionOptions": "Resolutions",
         "ratioOptions": "Aspect ratios",
         "customOptionPlaceholder": "Enter custom values, separated by commas",
@@ -4708,7 +4783,7 @@
         "referenceVideoTotalMaxSeconds": "Maximum total video (seconds)",
         "humanReview": "Supports human review",
         "supportedModes": "Video generation modes",
-        "capabilitiesHint": "Uses the same config contract as the EE media catalog. Save the complete configuration to apply it in XiaHua.",
+        "capabilitiesHint": "Uses the same config contract as the EE media catalog. Save the complete configuration to apply it in Manga Canvas.",
         "applyModelEdit": "Apply to config",
         "missingModelFields": "Enter a model ID and display name, then choose a provider.",
         "invalidCapabilitiesJson": "Capability config must be a valid JSON object.",
@@ -4746,7 +4821,7 @@
       "configured": "Configured",
       "notConfigured": "Not configured",
       "warningIconLabel": "Reference media storage is not configured",
-      "notConfiguredImpact": "Reference media storage is not configured. Text-only flows and text-to-image usually still work; features that need to upload local reference images will fail, including XiaHua reference images, character references, identity images, image-to-image, video first frames, and image-to-video. Configure Aliyun OSS or Cloudinary.",
+      "notConfiguredImpact": "Reference media storage is not configured. Text-only flows and text-to-image usually still work; features that need to upload local reference images will fail, including Manga Canvas reference images, character references, identity images, image-to-image, video first frames, and image-to-video. Configure Aliyun OSS or Cloudinary.",
       "showSecret": "Show",
       "hideSecret": "Hide",
       "fieldsHint": "Saved values are stored in the local CE settings database; full AccessKeys are not returned. Leave saved credentials blank and enter only the fields you want to replace.",

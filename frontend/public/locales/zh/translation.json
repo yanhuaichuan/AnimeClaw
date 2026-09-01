@@ -45,7 +45,7 @@
       "faq": "常见问题"
     },
     "hero": {
-      "subtitle": "从一本小说到成片：剧集规划、角色设定、场景分镜、首帧渲染、视频生成、成片合成。主线按流程一步步推，虾画在节点画布上自由编排，两边共用同一批资产。桌面客户端把本地素材、长任务渲染和自动更新一并接管。",
+      "subtitle": "从一本小说到成片：剧集规划、角色设定、场景分镜、首帧渲染、视频生成、成片合成。主线按流程一步步推，漫画在节点画布上自由编排，两边共用同一批资产。桌面客户端把本地素材、长任务渲染和自动更新一并接管。",
       "note": "安装包直连 CDN，内置自动更新，装一次就不用再回来。",
       "history": "全部平台的历史版本见"
     },
@@ -72,10 +72,10 @@
     "preview": {
       "eyebrow": "界面",
       "title": "主线走流程，画布做编排",
-      "lede": "主线把一本小说拆成剧集、角色、分镜、首帧、视频和合成，一步一页推着走；虾画是一块节点画布，可以把主线的镜头投影进来自由改，改完再同步回主线。两条路共用同一批资产，不用来回搬素材。",
-      "windowTitle": "DramaClaw — 第 03 集 · 画布",
-      "alt": "DramaClaw 桌面端画布界面示意：顶部是剧集标签条，左侧分镜大纲，中间节点画布，右侧参数面板。",
-      "caption": "示意图（虾画画布视图）"
+      "lede": "主线把一本小说拆成剧集、角色、分镜、首帧、视频和合成，一步一页推着走；漫画是一块节点画布，可以把主线的镜头投影进来自由改，改完再同步回主线。两条路共用同一批资产，不用来回搬素材。",
+      "windowTitle": "AnimeClaw — 第 03 集 · 画布",
+      "alt": "AnimeClaw 桌面端画布界面示意：顶部是剧集标签条，左侧分镜大纲，中间节点画布，右侧参数面板。",
+      "caption": "示意图（漫画画布视图）"
     },
     "capability": {
       "eyebrow": "能力",
@@ -124,7 +124,7 @@
     "changelog": {
       "v132": {
         "title": "本地 ComfyUI 配置简化，视频生成模式对齐",
-        "description": "MiniMax H3 以单一模型接入多个 Workflow，由虾驿按模式自动选流程；画布选定的首帧、首尾帧等模式在校验、计费与执行中保持一致。"
+        "description": "MiniMax H3 以单一模型接入多个 Workflow，由漫驿按模式自动选流程；画布选定的首帧、首尾帧等模式在校验、计费与执行中保持一致。"
       },
       "v131": {
         "title": "官方媒体模型目录可更新",
@@ -140,7 +140,7 @@
       },
       "v120": {
         "title": "功能积分透明化，外部智能体可接入",
-        "description": "统一展示功能价格、预计扣费与使用记录；Claude Code 等本地智能体可通过 MCP 直接调用 DramaClaw CE。"
+        "description": "统一展示功能价格、预计扣费与使用记录；Claude Code 等本地智能体可通过 MCP 直接调用 AnimeClaw CE。"
       }
     },
     "faq": {
@@ -149,7 +149,7 @@
       "items": {
         "macGatekeeper": {
           "question": "Mac 提示「无法打开，因为无法验证开发者」怎么办？",
-          "answer": "在「访达 — 应用程序」里找到 DramaClaw，按住 Control 点按图标选「打开」，在弹出的确认框里再点一次「打开」即可。这一步只需要做一次，之后正常双击启动。"
+          "answer": "在「访达 — 应用程序」里找到 AnimeClaw，按住 Control 点按图标选「打开」，在弹出的确认框里再点一次「打开」即可。这一步只需要做一次，之后正常双击启动。"
         },
         "winSmartScreen": {
           "question": "Windows 提示「Windows 已保护你的电脑」怎么办？",
@@ -465,21 +465,21 @@
       "lineLabel": "第 {{line}} 行",
       "noIssues": "未发现具体问题"
     },
-    "title": "虾导",
-    "upgrading": "虾导升级中，请敬请期待！",
-    "description": "在当前创作页面旁打开虾导。",
-    "toggle": "展开或收起虾导",
-    "close": "收起虾导",
+    "title": "漫导",
+    "upgrading": "漫导升级中，请敬请期待！",
+    "description": "在当前创作页面旁打开漫导。",
+    "toggle": "展开或收起漫导",
+    "close": "收起漫导",
     "resize": "拖动调整聊天宽度",
     "openExternal": "在新窗口打开",
-    "iframeTitle": "虾导",
+    "iframeTitle": "漫导",
     "newChat": "新会话",
     "expandSessions": "展开会话列表",
     "collapseSessions": "收起会话列表",
     "sessionActions": "会话操作",
     "deleteSessionConfirm": "是否删除此对话？",
     "noSessions": "暂无会话",
-    "chatTitle": "虾导",
+    "chatTitle": "漫导",
     "globalScope": "全局",
     "connected": "已连接",
     "connecting": "连接中",
@@ -489,11 +489,11 @@
     "emptyTitle": "开始对话",
     "emptyDescription": "可以询问项目进度、任务失败原因，或让助手帮你整理创作思路。",
     "syncingHistoryTitle": "正在初始化会话",
-    "syncingHistoryDescription": "正在连接虾导并同步历史对话，请稍候。",
-    "disclaimer": "虾导可能会出错，请核对关键剧情、角色与资产信息。",
+    "syncingHistoryDescription": "正在连接漫导并同步历史对话，请稍候。",
+    "disclaimer": "漫导可能会出错，请核对关键剧情、角色与资产信息。",
     "placeholder": "上传剧本后，说出要推进的分集、画面、配音或成片任务",
     "waiting": "等待聊天服务连接...",
-    "waitingResponse": "等待虾导回复",
+    "waitingResponse": "等待漫导回复",
     "waitingResponses": [
       "正在理解你想推进的内容",
       "正在核对当前对话上下文",
@@ -565,7 +565,7 @@
     "ingestAutomationUploading": "正在上传小说：{{filename}}",
     "ingestAutomationStarted": "已启动小说摄入：{{filename}}",
     "ingestAutomationFailed": "小说上传或启动失败：{{message}}",
-    "ingestAutomationNoProject": "请先进入一个项目，再从虾导上传小说生成视频。",
+    "ingestAutomationNoProject": "请先进入一个项目，再从漫导上传小说生成视频。",
     "ingestAutomationMissingFile": "未能读取上传的小说文件，请重新选择文件。",
     "attachmentOnlyPrompt": "请分析我上传的文件。",
     "attachmentAnalysisUploading": "正在上传文件供分析：{{filename}}",
@@ -576,11 +576,11 @@
   },
   "freezone": {
     "chat": {
-      "title": "虾导",
-      "description": "在虾画画布旁打开虾导。",
-      "toggle": "打开虾画虾导",
-      "close": "收起虾画虾导",
-      "resize": "拖动调整虾画虾导宽度"
+      "title": "漫导",
+      "description": "在漫画画布旁打开漫导。",
+      "toggle": "打开漫画漫导",
+      "close": "收起漫画漫导",
+      "resize": "拖动调整漫画漫导宽度"
     },
     "canvases": {
       "defaultSection": "默认画布",
@@ -702,9 +702,44 @@
   },
   "theme": {
     "toggle": "切换主题",
-    "light": "浅色",
-    "dark": "深色",
+    "light": "白色",
+    "dark": "暗色",
     "system": "跟随系统"
+  },
+  "musicPlayer": {
+    "title": "歌单播放器",
+    "open": "打开音乐播放器",
+    "close": "收起播放器",
+    "minimize": "收缩成小按钮",
+    "restore": "展开播放器",
+    "expand": "展开歌单",
+    "collapse": "收起歌单",
+    "play": "播放",
+    "pause": "暂停",
+    "prev": "上一首",
+    "next": "下一首",
+    "empty": "还没有歌曲。添加本地音频，或导入歌单。",
+    "addFiles": "添加本地音频",
+    "addUrl": "添加音频链接",
+    "urlPlaceholder": "https://… 直链 mp3 / m4a / ogg",
+    "importPlaylist": "导入歌单",
+    "loadDemo": "重新载入氛围歌单",
+    "clear": "清空歌单",
+    "remove": "移除",
+    "volume": "音量",
+    "nowPlaying": "正在播放",
+    "playlist": "当前歌单",
+    "untitled": "未命名曲目",
+    "unknownArtist": "未知",
+    "demoLoaded": "已载入氛围歌单（Kevin MacLeod，CC BY）",
+    "importSuccess": "已导入 {{count}} 首",
+    "importEmpty": "这个文件里没有可用的音频地址",
+    "importFailed": "无法解析歌单文件",
+    "urlInvalid": "请输入可播放的 http(s) 音频地址",
+    "added": "已加入歌单",
+    "filesAdded": "已添加 {{count}} 个本地文件（刷新页面后需重新添加）",
+    "helpTitle": "去哪找歌单",
+    "helpBody": "可直接播放：本地 mp3/m4a/ogg、音频直链、M3U / JSON 歌单。版权平台（网易云、QQ 音乐、Spotify）不能在这里在线拉流，请下载后导入。免费歌单可去 Jamendo、Free Music Archive、Internet Archive Netlabels、Pixabay Music。"
   },
   "rewards": {
     "accessoryUnlock": {
@@ -786,8 +821,8 @@
     },
     "domain": {
       "mainline": "主线",
-      "freezone": "Freezone",
-      "all": "主线与 Freezone"
+      "freezone": "漫画",
+      "all": "主线与漫画"
     },
     "columns": {
       "time": "时间",
@@ -809,23 +844,23 @@
     "production": "制作",
     "tools": "工具",
     "creationMode": "创作方式",
-    "xiaji": "虾集",
-    "xiajiMenu": "虾集菜单",
-    "ingest": "虾料",
-    "assets": "虾塘",
+    "xiaji": "漫集",
+    "xiajiMenu": "漫集菜单",
+    "ingest": "漫料",
+    "assets": "漫塘",
     "characters": "角色",
-    "episodes": "虾镜",
+    "episodes": "漫镜",
     "script": "脚本",
     "literalScript": "原文脚本",
     "sketches": "草图",
     "audio": "音频",
     "video": "视频",
     "compose": "合成",
-    "styles": "虾格",
-    "tasks": "虾条",
+    "styles": "漫格",
+    "tasks": "漫条",
     "taskCenter": "任务中心",
-    "aiAssistant": "虾导",
-    "freezone": "虾画",
+    "aiAssistant": "漫导",
+    "freezone": "漫画",
     "anime": "漫剧"
   },
   "anime": {
@@ -841,13 +876,34 @@
       "qa": "质检"
     },
     "panels": {
-      "studio": { "title": "漫剧工作台", "subtitle": "同一角色，连续十镜，先看连续性再花钱。" },
-      "episodes": { "title": "分镜工作台", "subtitle": "改表情、镜头和动作，锁定角色与服装。" },
-      "world": { "title": "故事世界", "subtitle": "时代、规则、势力，写进每一集。" },
-      "characters": { "title": "角色圣经", "subtitle": "白发红眼黑裙左手红绳，第 37 集也必须还在。" },
-      "styles": { "title": "风格锁", "subtitle": "线、色、光、脸，从第 1 集锁到第 100 集。" },
-      "story": { "title": "故事记忆", "subtitle": "钩子、悬念、未收伏笔。" },
-      "qa": { "title": "漫剧质检", "subtitle": "故事 / 角色 / 画面 / 声音 / 连续性。" }
+      "studio": {
+        "title": "漫剧工作台",
+        "subtitle": "同一角色，连续十镜，先看连续性再花钱。"
+      },
+      "episodes": {
+        "title": "分镜工作台",
+        "subtitle": "改表情、镜头和动作，锁定角色与服装。"
+      },
+      "world": {
+        "title": "故事世界",
+        "subtitle": "时代、规则、势力，写进每一集。"
+      },
+      "characters": {
+        "title": "角色圣经",
+        "subtitle": "白发红眼黑裙左手红绳，第 37 集也必须还在。"
+      },
+      "styles": {
+        "title": "风格锁",
+        "subtitle": "线、色、光、脸，从第 1 集锁到第 100 集。"
+      },
+      "story": {
+        "title": "故事记忆",
+        "subtitle": "钩子、悬念、未收伏笔。"
+      },
+      "qa": {
+        "title": "漫剧质检",
+        "subtitle": "故事 / 角色 / 画面 / 声音 / 连续性。"
+      }
     },
     "inspector": {
       "character": "角色",
@@ -913,7 +969,9 @@
       "body": "这是 AnimeClaw 的产品标准：脸、发、裙、红绳、耳坠保持不变。点下面按钮写入苏璃 Demo。",
       "cta": "生成 10 镜 Demo"
     },
-    "characters": { "empty": "还没有角色圣经。先跑 10 镜 Demo，或从角色页确认阵容。" },
+    "characters": {
+      "empty": "还没有角色圣经。先跑 10 镜 Demo，或从角色页确认阵容。"
+    },
     "qa": {
       "empty": "还没有质检结果。先生成分镜再检查。",
       "story": "故事",
@@ -998,7 +1056,7 @@
       "description": "描述",
       "appearance": "外貌描述",
       "facePrompt": "面部提示词",
-      "facePromptHint": "例：oval face, big eyes"
+      "facePromptHint": "例：鹅蛋脸，大眼睛，浅笑"
     },
     "portrait": {
       "label": "肖像",
@@ -1186,14 +1244,14 @@
       "projectQueueFull": "当前项目{{queue}}队列已满"
     },
     "freezone": {
-      "openCharacter": "虾画",
-      "openCharacterTip": "在 虾画 编辑角色资产",
-      "openPortrait": "肖像 虾画",
-      "openPortraitTip": "在 虾画 编辑角色肖像资产",
-      "openIdentity": "身份图 虾画",
-      "openIdentityTip": "在 虾画 编辑身份图资产",
-      "opened": "已打开 虾画",
-      "openFailed": "打开 虾画 失败"
+      "openCharacter": "漫画",
+      "openCharacterTip": "在 漫画 编辑角色资产",
+      "openPortrait": "肖像 漫画",
+      "openPortraitTip": "在 漫画 编辑角色肖像资产",
+      "openIdentity": "身份图 漫画",
+      "openIdentityTip": "在 漫画 编辑身份图资产",
+      "opened": "已打开 漫画",
+      "openFailed": "打开 漫画 失败"
     },
     "confirm": {
       "delete": "删除角色「{{name}}」？此操作不可撤销。",
@@ -1259,8 +1317,8 @@
       "subtitle": "继续推进你的故事、资产与镜头",
       "noAccount": "还没有账号？",
       "applyAccount": "申请账号",
-      "showcaseLabel": "DramaClaw 作品展示",
-      "showcaseEyebrow": "MADE WITH DRAMACLAW",
+      "showcaseLabel": "AnimeClaw 作品展示",
+      "showcaseEyebrow": "漫剧工厂出品",
       "showcaseMeta": "创作现场",
       "showcaseTitle": "想象力，全速开拍",
       "showcaseDescription": "角色、分镜、声音与镜头，在同一条制作线上持续推进"
@@ -1289,19 +1347,19 @@
         "storyWorld": "构建专属故事世界"
       },
       "headlinePrefix": "创造自己的",
-      "headlineBrand": "DC",
+      "headlineBrand": "AC",
       "headlineSuffix": "宇宙",
-      "subtitlePrefix": "Make Your Own",
-      "subtitleBrand": "DC",
-      "subtitleSuffix": "",
-      "start": "灵感发生",
-      "sub": "WHERE EVERY SPARK OF INSPIRATION MEETS THE POWER OF EFFORTLESS AI CREATION",
+      "subtitlePrefix": "打造你的",
+      "subtitleBrand": "AC",
+      "subtitleSuffix": "宇宙",
+      "start": "开始创作",
+      "sub": "让每一次灵感，都能轻松变成可推进的漫剧镜头",
       "version": "{{version}}",
       "changelog": "更新日志"
     },
     "community": {
       "label": "社区作品",
-      "heading": "DramaClaw TV",
+      "heading": "AnimeClaw TV",
       "likes": "{{count}} 次喜欢",
       "openWork": "打开作品「{{title}}」",
       "works": {
@@ -1371,7 +1429,7 @@
     "namePlaceholder": "请输入你的项目名称",
     "clearName": "清空项目名称",
     "nameNoChinese": "项目名称不能包含中文字符",
-    "nameInvalid": "项目名称只能包含英文字母、数字和下划线",
+    "nameInvalid": "项目名称只能包含中文、英文字母、数字和下划线",
     "nameExistsActive": "已存在同名项目，请更换名称",
     "nameExistsArchived": "归档中已有同名项目，请先取消归档或更换名称",
     "nameExistsDeleted": "回收站中已有同名项目，请永久删除后再创建",
@@ -1441,7 +1499,7 @@
     "noActiveDescription": "创建一个新项目，或在「归档」与「回收站」标签中查看其他项目。",
     "actions": {
       "open": "打开",
-      "openFreezone": "打开虾画",
+      "openFreezone": "打开漫画",
       "share": "共享",
       "archive": "归档…",
       "unarchive": "取消归档",
@@ -1604,10 +1662,16 @@
       "panoCaptureDescription": "选择场景 360 视角并导出截图。",
       "downloadScreenshot": "下载截图",
       "panoScreenshotDownloaded": "360 截图已下载",
-      "openFreezone": "虾画",
-      "openFreezoneTip": "在 虾画 编辑当前场景",
-      "freezoneOpened": "已打开场景 虾画",
-      "freezoneOpenFailed": "打开场景 虾画 失败",
+      "masterUploaded": "场景源图已上传",
+      "panoUploaded": "360 全景已上传",
+      "customPackageUploaded": "自定义场景包已上传",
+      "masterDeleted": "场景源图已删除",
+      "panoDeleted": "360 全景已删除",
+      "customPackageDeleted": "自定义场景包已删除",
+      "openFreezone": "漫画",
+      "openFreezoneTip": "在 漫画 编辑当前场景",
+      "freezoneOpened": "已打开场景 漫画",
+      "freezoneOpenFailed": "打开场景 漫画 失败",
       "noMaster": "未生成 正面图",
       "noReverse": "未生成 背面图",
       "noPano": "未生成 360 全景图",
@@ -1659,7 +1723,7 @@
       "title": "道具管理",
       "count": "{{count}} 个道具",
       "newProp": "新建道具",
-      "newPropHint": "AI自动提取道具需要在虾镜中按集数分集提取",
+      "newPropHint": "AI自动提取道具需要在漫镜中按集数分集提取",
       "editProp": "编辑道具",
       "emptyTitle": "暂无道具数据",
       "emptyDescription": "新建道具，或在 beat 页把本集道具加入全局。",
@@ -1674,10 +1738,10 @@
       "uploadReference": "上传道具",
       "uploadingReference": "上传中...",
       "uploadReferenceSuccess": "道具参考图已上传",
-      "openFreezone": "虾画",
-      "openFreezoneTip": "在 虾画 编辑当前道具",
-      "freezoneOpened": "已打开道具 虾画",
-      "freezoneOpenFailed": "打开道具 虾画 失败",
+      "openFreezone": "漫画",
+      "openFreezoneTip": "在 漫画 编辑当前道具",
+      "freezoneOpened": "已打开道具 漫画",
+      "freezoneOpenFailed": "打开道具 漫画 失败",
       "owner": "所属角色",
       "types": {
         "weapon": "武器",
@@ -1774,7 +1838,7 @@
     "success": "成功"
   },
   "ingest": {
-    "title": "虾料",
+    "title": "漫料",
     "subtitle": "上传剧本，开启你的创意之旅",
     "dropzoneHint": "点击或拖拽上传小说文件",
     "supportedFormats": "支持 .txt / .md / .docx · 文件不超过 512KB · 正文不超过 10 万字",
@@ -2053,7 +2117,9 @@
       "closeHint": "点击收起"
     },
     "relative": {
-      "justNow": "刚刚"
+      "justNow": "刚刚",
+      "minutesAgo": "{{count}} 分钟前",
+      "hoursAgo": "{{count}} 小时前"
     },
     "detail": {
       "currentStatus": "当前状态",
@@ -2424,9 +2490,9 @@
       "insertBeforeShort": "前",
       "insertAfter": "在 Beat #{{n}} 后插入手工镜头",
       "insertAfterShort": "后",
-      "openFreezone": "进入虾画 Beat 工作台",
-      "openFreezoneTip": "进入虾画编辑",
-      "openFreezoneFailed": "打开虾画失败",
+      "openFreezone": "进入漫画 Beat 工作台",
+      "openFreezoneTip": "进入漫画编辑",
+      "openFreezoneFailed": "打开漫画失败",
       "markedProps": "道具 {{count}}",
       "detectedProps": "出场道具 {{count}}"
     },
@@ -2806,10 +2872,10 @@
         "backgroundMissing": "还没有背景图",
         "backgroundCurrent": "当前使用",
         "backgroundSnapshotUse": "截图使用",
-        "openFreezone": "虾画编辑",
-        "openFreezoneTip": "在 虾画 编辑当前 beat 的草图",
-        "freezoneOpened": "已打开草图 虾画",
-        "freezoneOpenFailed": "打开草图 虾画 失败",
+        "openFreezone": "漫画编辑",
+        "openFreezoneTip": "在 漫画 编辑当前 beat 的草图",
+        "freezoneOpened": "已打开草图 漫画",
+        "freezoneOpenFailed": "打开草图 漫画 失败",
         "cropTitleWithAspect": "裁剪 {{aspect}}",
         "cropDragHandle": "移动裁剪区域"
       },
@@ -2848,10 +2914,10 @@
         "versionMismatchDesc": "该渲染图基于旧版脚本生成，内容可能与当前脚本不一致。确定强制使用吗？",
         "regenTitle": "重新生成渲染图？",
         "regenDesc": "将为 Beat #{{n}} 重新生成渲染图，新渲染图进入候选池。",
-        "openFreezone": "虾画编辑",
-        "openFreezoneTip": "在 虾画 编辑当前 beat 的渲染图",
-        "freezoneOpened": "已打开虾画编辑",
-        "freezoneOpenFailed": "打开虾画编辑失败",
+        "openFreezone": "漫画编辑",
+        "openFreezoneTip": "在 漫画 编辑当前 beat 的渲染图",
+        "freezoneOpened": "已打开漫画编辑",
+        "freezoneOpenFailed": "打开漫画编辑失败",
         "backgroundTitle": "渲染 背景参考",
         "backgroundCurrent": "当前：{{label}}",
         "backgroundHint": "只给草图上色/材质，不改构图。",
@@ -3016,7 +3082,7 @@
         "batchRegenSketchSuccess": "已发起 {{count}} 个 beat 的草图重抽任务",
         "batchRegenRenderSuccess": "已发起 {{count}} 个 beat 的渲染图重抽任务",
         "episodeFreezone": "EP Freezone",
-        "episodeFreezoneTooltip": "打开本集虾画工作区",
+        "episodeFreezoneTooltip": "打开本集漫画工作区",
         "episodeFreezoneOpened": "已打开 EP Freezone",
         "episodeFreezoneOpenFailed": "打开 EP Freezone 失败"
       },
@@ -3034,10 +3100,10 @@
         "jumpBeat": "跳 beat {{n}}"
       },
       "actionPanel": {
-        "episodeFreezone": "本集虾画",
-        "episodeFreezoneTooltip": "在虾画中打开本集素材",
-        "episodeFreezoneOpened": "已打开本集虾画",
-        "episodeFreezoneOpenFailed": "打开本集虾画失败"
+        "episodeFreezone": "本集漫画",
+        "episodeFreezoneTooltip": "在漫画中打开本集素材",
+        "episodeFreezoneOpened": "已打开本集漫画",
+        "episodeFreezoneOpenFailed": "打开本集漫画失败"
       }
     },
     "state": {
@@ -4411,7 +4477,16 @@
     "secretSavedPlaceholder": "已保存 · {{preview}}（重新输入可替换）",
     "pages": {
       "models": "模型与渠道",
-      "storage": "媒体存储"
+      "storage": "媒体存储",
+      "appearance": "外观与主题"
+    },
+    "appearancePage": {
+      "title": "外观与主题",
+      "description": "切换白色、暗色，或跟随系统。立即作用于整个工作台。",
+      "current": "当前主题",
+      "lightHint": "干净白底，按钮和强调色仍是樱粉，和暗色共用同一套组件。",
+      "darkHint": "墨黑樱色工作台，适合长时间分镜和画布。",
+      "systemHint": "跟随电脑的浅色 / 深色外观自动切换。"
     },
     "modelConfig": {
       "title": "模型配置",
@@ -4464,7 +4539,7 @@
         "mediaCatalogCheckFailed": "检查官方媒体模型列表失败，请稍后重试。"
       },
       "custom": {
-        "description": "CE 使用本机 SQLite NewAPI。DramaClaw 会自动连接数据库、创建运行令牌并启用本地渠道。",
+        "description": "CE 使用本机 SQLite NewAPI。AnimeClaw 会自动连接数据库、创建运行令牌并启用本地渠道。",
         "init": "初始化本地 NewAPI",
         "repair": "检测并修复",
         "initialized": "本地 NewAPI 已就绪。",
@@ -4483,7 +4558,7 @@
         "setupConfirmPassword": "确认密码",
         "setupPasswordPlaceholder": "至少 8 位",
         "setupConfirmPasswordPlaceholder": "再次输入密码",
-        "setupPasswordOnlyOnce": "该账号和密码只会在全新 NewAPI 首次创建管理员时提交给你的 NewAPI 实例。若 NewAPI 已经初始化，即使这里填写了密码，也不会修改已有管理员密码。DramaClaw 不会保存密码，也不会用它执行后续操作；首次初始化完成后请自行保存，用于登录 NewAPI 后台。",
+        "setupPasswordOnlyOnce": "该账号和密码只会在全新 NewAPI 首次创建管理员时提交给你的 NewAPI 实例。若 NewAPI 已经初始化，即使这里填写了密码，也不会修改已有管理员密码。AnimeClaw 不会保存密码，也不会用它执行后续操作；首次初始化完成后请自行保存，用于登录 NewAPI 后台。",
         "setupRequired": "当前本地 NewAPI 尚未完成初始化，请填写初始化密码和确认密码后重试。",
         "setupAlreadyInitializedPasswordIgnored": "检测到你的 NewAPI 已经初始化，本次没有调用 NewAPI 初始化接口，也没有修改已有管理员密码；你刚刚填写的密码已被忽略并清空。",
         "setupPasswordMissingUsername": "请填写管理员用户名。",
@@ -4561,7 +4636,7 @@
         "saveChannels": "保存渠道配置",
         "channelsSaved": "渠道配置已保存到本地。",
         "comfyWorkflows": "ComfyUI Workflows",
-        "comfyWorkflowHint": "一个模型可以添加多份 API Format Workflow，具体路由由虾驿处理。API Key 可选。",
+        "comfyWorkflowHint": "一个模型可以添加多份 API Format Workflow，具体路由由漫驿处理。API Key 可选。",
         "comfyAddWorkflow": "添加 Workflow",
         "comfyExpandWorkflow": "展开查看",
         "comfyCollapseWorkflow": "收起",
@@ -4615,16 +4690,16 @@
         "multimodalRequiredBadge": "需要多模态",
         "cogneeDescription": "小说导入和知识检索需要同时配置理解模型与向量模型，两者共同构成 Cognee 小说知识库。",
         "groups": {
-          "xiahua": "虾画",
-          "xialiao": "虾料",
-          "xiatan": "虾塘",
-          "xiajing": "虾镜",
-          "xiadao": "虾导",
-          "xiage": "虾格",
-          "novelImport": "虾料 · 小说知识库（Cognee）"
+          "xiahua": "漫画",
+          "xialiao": "漫料",
+          "xiatan": "漫塘",
+          "xiajing": "漫镜",
+          "xiadao": "漫导",
+          "xiage": "漫格",
+          "novelImport": "漫料 · 小说知识库（Cognee）"
         },
         "features": {
-          "HERMES": "虾导聊天模型",
+          "HERMES": "漫导聊天模型",
           "GLOBAL_VIDEO_OPTIMIZER": "根据画面优化视频提示词",
           "SEEDANCE2_PROMPT_COMPOSER": "组合视频生成提示词",
           "GLOBAL_VIDEO_IDENTITY_DETECTOR": "识别草图中的角色与道具标记",
@@ -4671,7 +4746,7 @@
       },
       "mediaModels": {
         "title": "图片 / 视频 / 音频生成模型",
-        "description": "模型列表来自当前自定义本地配置。可新增图片、视频模型并配置其在虾画中显示的能力。",
+        "description": "模型列表来自当前自定义本地配置。可新增图片、视频模型并配置其在漫画中显示的能力。",
         "addModel": "新增模型",
         "addModelTitle": "新增媒体模型",
         "editModelTitle": "编辑媒体模型",
@@ -4682,9 +4757,9 @@
         "displayName": "显示名称",
         "mediaType": "媒体类型",
         "sortOrder": "排序",
-        "enabled": "在虾画中启用",
+        "enabled": "在漫画中启用",
         "capabilitiesJson": "能力配置 JSON",
-        "commonCapabilities": "虾画能力",
+        "commonCapabilities": "漫画能力",
         "resolutionOptions": "分辨率",
         "ratioOptions": "画面比例",
         "customOptionPlaceholder": "输入自定义值，多个值用逗号分隔",
@@ -4708,7 +4783,7 @@
         "referenceVideoTotalMaxSeconds": "视频合计最长（秒）",
         "humanReview": "支持真人审核",
         "supportedModes": "视频生成模式",
-        "capabilitiesHint": "使用与 EE 媒体模型目录一致的 config；保存全部配置后在虾画生效。",
+        "capabilitiesHint": "使用与 EE 媒体模型目录一致的 config；保存全部配置后在漫画生效。",
         "applyModelEdit": "应用到配置",
         "missingModelFields": "请填写模型 ID、显示名称并选择渠道。",
         "invalidCapabilitiesJson": "能力配置必须是有效的 JSON 对象。",
@@ -4746,7 +4821,7 @@
       "configured": "已配置",
       "notConfigured": "未配置",
       "warningIconLabel": "参考媒体存储未配置",
-      "notConfiguredImpact": "未配置参考媒体存储。纯文本和纯文生图通常不受影响；但需要上传本地参考图的功能会失败，例如虾画参考图、角色参考图、身份图、图生图、视频首帧和图生视频。请配置阿里云 OSS 或 Cloudinary。",
+      "notConfiguredImpact": "未配置参考媒体存储。纯文本和纯文生图通常不受影响；但需要上传本地参考图的功能会失败，例如漫画参考图、角色参考图、身份图、图生图、视频首帧和图生视频。请配置阿里云 OSS 或 Cloudinary。",
       "showSecret": "显示",
       "hideSecret": "隐藏",
       "fieldsHint": "保存后写入 CE 本地配置库；后端不会回传完整 AccessKey。留空保持已保存值，只填写需要替换的字段即可。",

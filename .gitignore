@@ -9,6 +9,7 @@ __pycache__/
 /.nicegui
 /output
 /state
+/frontend/state/
 /runtime
 logs/
 jr_error.log
